@@ -1,10 +1,12 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
+
+import HeaderTop from "./HeaderTop";
+import Header from "./Header";
+import Footer from "../components/Footer";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -48,9 +50,31 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+      <div className="header__area">
+        <HeaderTop />
+        <Header />
+      </div>
       <div>{children}</div>
       <Footer />
+      {/*  JS here  */}
+      <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+      <script src="assets/js/vendor/waypoints.min.js"></script>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/meanmenu.js"></script>
+      <script src="assets/js/swiper-bundle.min.js"></script>
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <script src="assets/js/magnific-popup.min.js"></script>
+      <script src="assets/js/parallax.min.js"></script>
+      <script src="assets/js/backToTop.js"></script>
+      <script src="assets/js/nice-select.min.js"></script>
+      <script src="assets/js/counterup.min.js"></script>
+      <script src="assets/js/jquery.appear.js"></script>
+      <script src="assets/js/jquery.knob.js"></script>
+      <script src="assets/js/ajax-form.js"></script>
+      <script src="assets/js/wow.min.js"></script>
+      <script src="assets/js/isotope.pkgd.min.js"></script>
+      <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+      <script src="assets/js/main.js"></script>
     </div>
   );
 };
