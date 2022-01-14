@@ -7,6 +7,21 @@ import { withPrefix } from "gatsby";
 import HeaderTop from "./HeaderTop";
 import Header from "./Header";
 
+import "../assets/css/preloader.css";
+import "../assets/css/bootstrap.min.css";
+import "../assets/css/meanmenu.css";
+import "../assets/css/animate.min.css";
+import "../assets/css/owl.carousel.min.css";
+import "../assets/css/swiper-bundle.css";
+import "../assets/css/backToTop.css";
+import "../assets/css/magnific-popup.css";
+import "../assets/css/nice-select.css";
+import "../assets/css/circularProgressBar.css";
+import "../assets/css/fontAwesome5Pro.css";
+import "../assets/css/flaticon.css";
+import "../assets/css/default.css";
+import "../assets/css/style.css";
+
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
@@ -51,21 +66,6 @@ const TemplateWrapper = ({ children }) => {
           property="og:image"
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
-
-        {/* <link rel="stylesheet" href="../assets/css/preloader.css" />
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../assets/css/meanmenu.css" />
-        <link rel="stylesheet" href="../assets/css/animate.min.css" />
-        <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
-        <link rel="stylesheet" href="../assets/css/swiper-bundle.css" />
-        <link rel="stylesheet" href="../assets/css/backToTop.css" />
-        <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
-        <link rel="stylesheet" href="../assets/css/nice-select.css" />
-        <link rel="stylesheet" href="../assets/css/circularProgressBar.css" />
-        <link rel="stylesheet" href="../assets/css/fontAwesome5Pro.css" />
-        <link rel="stylesheet" href="../assets/css/flaticon.css" />
-        <link rel="stylesheet" href="../assets/css/default.css" />
-        <link rel="stylesheet" href="../assets/css/style.css" /> */}
       </Helmet>
 
       <div className="header__area">
