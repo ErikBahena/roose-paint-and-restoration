@@ -22,35 +22,30 @@ export default function Header() {
               <div className="main-menu">
                 <nav id="mobile-menu">
                   <ul>
-                    <li className="active">
-                      <a href="index.html">
-                        Home <i className="far fa-angle-down" />
-                      </a>
-                      <ul className="submenu">
-                        <li>
-                          <a href="index.html">Home Style 1</a>
-                        </li>
-                        <li>
-                          <a href="index-2.html">Home Style 2</a>
-                        </li>
-                        <li>
-                          <a href="index-3.html">Home Style 3</a>
-                        </li>
-                      </ul>
+                    <li>
+                      <Link to="/" activeClassName="active">
+                        Home
+                      </Link>
                     </li>
                     <li>
-                      <a href="about.html">About</a>
+                      <Link to="/about" activeClassName="active">
+                        About
+                      </Link>
                     </li>
                     <li>
-                      <a href="services.html">
+                      <Link to="/services" activeClassName="active">
                         Services <i className="far fa-angle-down" />
-                      </a>
+                      </Link>
                       <ul className="submenu">
                         <li>
-                          <a href="services.html">Services</a>
+                          <Link to="/services" activeClassName="active">
+                            Services
+                          </Link>
                         </li>
                         <li>
-                          <a href="services-details.html">Services Details</a>
+                          <Link to="/services/details" activeClassName="active">
+                            Services Details
+                          </Link>
                         </li>
                       </ul>
                     </li>
@@ -87,7 +82,9 @@ export default function Header() {
                       </ul>
                     </li>
                     <li>
-                      <a href="contact.html">Conatct</a>
+                      <Link to="/contact" activeClassName="active">
+                        Contact
+                      </Link>
                     </li>
                   </ul>
                 </nav>
