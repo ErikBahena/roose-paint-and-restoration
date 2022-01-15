@@ -18,6 +18,14 @@ export default function Header() {
       : header.classList.remove("sticky");
   };
 
+  const isPartiallyActive = ({ isPartiallyCurrent }) => {
+    return isPartiallyCurrent ? { className: "active" } : null;
+  };
+
+  const PartialNavLink = (props) => (
+    <Link getProps={isPartiallyActive} {...props} />
+  );
+
   return (
     <div
       id="header-sticky"
@@ -58,41 +66,37 @@ export default function Header() {
                     </li>
                     <li>
                       <Link to="/services" activeClassName="active">
-                        Services
-                        {/* <i className="far fa-angle-down" /> */}
+                        Services <i className="far fa-angle-down" />
+                      </Link>
+                      <ul className="submenu">
+                        <li>
+                          <PartialNavLink
+                            to="/services/interior"
+                            activeClassName="active"
+                          >
+                            Interior
+                          </PartialNavLink>
+                        </li>
+                        <li>
+                          <Link to="/services/exterior">Exterior</Link>
+                        </li>
+                        <li>
+                          <Link to="/services/residential">Residential</Link>
+                        </li>
+                        <li>
+                          <Link to="/services/commercial">Commercial</Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <Link to="/gallery" activeClassName="active">
+                        Gallery
                       </Link>
                     </li>
                     <li>
-                      <a href="about.html">
-                        Pages <i className="far fa-angle-down" />
-                      </a>
-                      <ul className="submenu">
-                        <li>
-                          <a href="portfolio.html">portfolio</a>
-                        </li>
-                        <li>
-                          <a href="portfolio-details.html">portfolio Details</a>
-                        </li>
-                        <li>
-                          <a href="team.html">team</a>
-                        </li>
-                        <li>
-                          <a href="team-details.html">team Details</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="blog.html">
-                        News <i className="far fa-angle-down" />
-                      </a>
-                      <ul className="submenu">
-                        <li>
-                          <a href="blog.html">News</a>
-                        </li>
-                        <li>
-                          <a href="blog-details.html">News Details</a>
-                        </li>
-                      </ul>
+                      <Link to="/blog" activeClassName="active">
+                        News
+                      </Link>
                     </li>
                     <li>
                       <Link to="/contact" activeClassName="active">

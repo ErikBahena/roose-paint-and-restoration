@@ -6,7 +6,6 @@
 03. Sidebar Js
 04. Cart Toggle Js
 05. Search Js
-06. Sticky Header Js
 07. Data Background Js
 08. Testimonial Slider Js
 09. Slider Js (Home 3)
@@ -80,17 +79,6 @@
   });
   $(".search-close-btn").on("click", function () {
     $(".search__area").removeClass("opened");
-  });
-
-  ////////////////////////////////////////////////////
-  // 06. Sticky Header Js
-  windowOn.on("scroll", function () {
-    var scroll = $(window).scrollTop();
-    if (scroll < 100) {
-      $("#header-sticky").removeClass("sticky");
-    } else {
-      $("#header-sticky").addClass("sticky");
-    }
   });
 
   ////////////////////////////////////////////////////

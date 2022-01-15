@@ -1,5 +1,6 @@
 import React from "react";
+import PageTitle from "../components/PageTitle";
 
-const About = () => <div style={{ height: "300vh" }}>about page</div>;
-
-export default About;
+export default function about({ location }) {
+  return <PageTitle location={location} />;
+}

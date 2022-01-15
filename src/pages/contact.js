@@ -1,5 +1,6 @@
 import React from "react";
+import PageTitle from "../components/PageTitle";
 
-const Contact = () => <div>contact page</div>;
-
-export default Contact;
+export default function contact({ location }) {
+  return <PageTitle location={location} />;
+}
