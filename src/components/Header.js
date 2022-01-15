@@ -12,7 +12,7 @@ export default function Header() {
         <div className="row align-items-center">
           <div className="col-xxl-3 col-xl-2 col-lg-3 col-md-6 col-sm-6 col-6">
             <div className="logo">
-              <Link href="/">
+              <Link to="/">
                 <img
                   src={logo}
                   alt="logo"
@@ -43,20 +43,9 @@ export default function Header() {
                     </li>
                     <li>
                       <Link to="/services" activeClassName="active">
-                        Services <i className="far fa-angle-down" />
+                        Services
+                        {/* <i className="far fa-angle-down" /> */}
                       </Link>
-                      <ul className="submenu">
-                        <li>
-                          <Link to="/services" activeClassName="active">
-                            Services
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/services/details" activeClassName="active">
-                            Services Details
-                          </Link>
-                        </li>
-                      </ul>
                     </li>
                     <li>
                       <a href="about.html">
@@ -105,23 +94,16 @@ export default function Header() {
               <div className="header__social mr-35 d-none d-xl-block">
                 <ul>
                   <li>
-                    <a href="#">
+                    <a
+                      href="https://www.facebook.com/roosepaint/"
+                      target="_blank"
+                    >
                       <i className="fab fa-facebook-f" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
+                    <a href="#" target="_blank">
                       <i className="fab fa-youtube" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-linkedin" />
                     </a>
                   </li>
                 </ul>
