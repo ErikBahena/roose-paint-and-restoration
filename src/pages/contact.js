@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function contact() {
-  return <div>contact page</div>;
-}
+const Contact = () => <div>contact page</div>;
+
+export default Contact;

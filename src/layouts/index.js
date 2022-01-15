@@ -2,9 +2,6 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import "../assets/scss/main.scss";
 
-import HeaderTop from "../components/HeaderTop";
-import Header from "../components/Header";
-
 import "../assets/css/preloader.css";
 import "../assets/css/bootstrap.min.css";
 import "../assets/css/meanmenu.css";
@@ -20,6 +17,10 @@ import "../assets/css/flaticon.css";
 import "../assets/css/default.css";
 import "../assets/css/style.css";
 
+import HeaderTop from "../components/HeaderTop";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 const Layout = ({ children, data }) => {
   // const { title, description } = useSiteMetadata();
 
@@ -33,6 +34,8 @@ const Layout = ({ children, data }) => {
       </div>
 
       <div>{children}</div>
+
+      <Footer />
 
       {/*  JS here  */}
       <script src="../assets/js/vendor/jquery-3.6.0.min.js" />

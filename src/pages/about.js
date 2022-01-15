@@ -1,8 +1,5 @@
 import React from "react";
-import Layout from "../layouts";
 
-const About = () => {
-  return <div>about page</div>;
-};
+const About = () => <div style={{ height: "500px" }}>about page</div>;
 
 export default About;

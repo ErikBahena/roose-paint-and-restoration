@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../img/logo.jpg";
+import logo from "../assets/img/logo/lightLogo.png";
 import { Link } from "gatsby";
 
 export default function Header() {
@@ -12,9 +12,18 @@ export default function Header() {
         <div className="row align-items-center">
           <div className="col-xxl-3 col-xl-2 col-lg-3 col-md-6 col-sm-6 col-6">
             <div className="logo">
-              <a href="index.html">
-                <img src={logo} alt="logo" style={{ height: "100px" }} />
-              </a>
+              <Link href="/">
+                <img
+                  src={logo}
+                  alt="logo"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    maxHeight: "100px",
+                    paddingTop: "10px",
+                  }}
+                />
+              </Link>
             </div>
           </div>
           <div className="col-xxl-6 col-xl-6 col-lg-7 d-none d-lg-block">
