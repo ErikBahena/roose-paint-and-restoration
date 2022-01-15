@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../assets/img/logo/lightLogo.png";
 import { Link } from "gatsby";
 
 export default function Header() {
+  useEffect(() => {
+    window.addEventListener("scroll", isSticky);
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  });
+
+  const isSticky = (e) => {
+    const header = document.querySelector("#header-sticky");
+    const scrollTop = window.scrollY;
+    scrollTop >= 100
+      ? header.classList.add("sticky")
+      : header.classList.remove("sticky");
+  };
+
   return (
     <div
       id="header-sticky"
