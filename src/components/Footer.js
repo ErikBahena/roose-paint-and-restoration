@@ -53,8 +53,7 @@ export default function Footer() {
                     <div className="footer__widget-about">
                       <p>
                         Sed ut perspiciati unde omnis iste natus error sit
-                        voluptatem accusantium emque laudantium totam rem
-                        aperiam
+                        voluptaem accusantium emque laudantium totam rem aperiam
                       </p>
                       <div className="footer__logo">
                         <a href="index.html">
