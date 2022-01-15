@@ -20,6 +20,7 @@ import "../assets/css/style.css";
 import HeaderTop from "../components/HeaderTop";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import BackToTop from "../components/BackToTop";
 
 const Layout = ({ children, data }) => {
   // const { title, description } = useSiteMetadata();
@@ -27,7 +28,7 @@ const Layout = ({ children, data }) => {
   return (
     <div>
       <Helmet />
-
+      <BackToTop />
       <div className="header__area">
         <HeaderTop />
         <Header />

@@ -35,7 +35,7 @@ export default function Header() {
                     maxWidth: "100%",
                     height: "auto",
                     maxHeight: "100px",
-                    paddingTop: "10px",
+                    padding: "10px 0px",
                   }}
                 />
               </Link>
