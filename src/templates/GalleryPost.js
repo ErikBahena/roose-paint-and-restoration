@@ -6,7 +6,6 @@ import { Link } from "gatsby";
 const GalleryPost = (data) => {
   return (
     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-      {console.log(data)}
       <div className="portfolio__item-3 mb-30 p-relative fix">
         <div className="portfolio__thumb w-img">
           <img src={`${data.image.publicURL}`} />
