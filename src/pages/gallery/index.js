@@ -1,7 +1,11 @@
 import React from "react";
 import PageTitle from "../../components/PageTitle";
+import GalleryPost from "../../templates/GalleryPost";
+import { graphql } from "gatsby";
 
-export default function index({ location }) {
+const index = ({ data, location }) => {
+  const posts = data.allMarkdownRemark.edges;
+
   return (
     <>
       <PageTitle location={location} />
@@ -20,7 +24,10 @@ export default function index({ location }) {
             </div>
           </div>
           <div className="row">
-            <div>Item from mapping query</div>
+            {posts &&
+              posts.map((post) => (
+                <GalleryPost key={post.node.id} {...post.node.frontmatter} />
+              ))}
           </div>
           <div className="row">
             <div className="col-xxl-12">
@@ -35,4 +42,26 @@ export default function index({ location }) {
       </section>
     </>
   );
-}
+};
+
+export const query = graphql`
+  {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date
+            description
+            image {
+              publicURL
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default index;
