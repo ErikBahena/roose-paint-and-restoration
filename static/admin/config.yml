@@ -22,9 +22,56 @@ collections:
     public_folder: ""
     path: "{{title}}/index"
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Site Info"
+        name: contact_info
+        file: site/settings/siteInfo.json
+        fields:
+          - { label: "Header Address", name: "headerAddress", widget: "string" }
+          - label: "Full Business Address"
+            name: "fullBusinessAddress"
+            widget: "object"
+            required: false
+            fields:
+              - {
+                  label: "Street",
+                  name: "street",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "City",
+                  name: "city",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Postal Code",
+                  name: "postalCode",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "State",
+                  name: "state",
+                  widget: "string",
+                  required: false,
+                }
+
+          - { label: "Support Email", name: "supportEmail", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Facebook Link", name: "facebookLink", widget: "string" }
+          - {
+              label: "YouTube Link",
+              name: "youtubeLink",
+              required: false,
+              widget: "string",
+            }
