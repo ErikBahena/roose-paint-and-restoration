@@ -75,3 +75,18 @@ collections:
               required: false,
               widget: "string",
             }
+  - name: "galleryPosts"
+    label: "Gallery Post"
+    folder: "content/galleryPosts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
+    media_folder: "static/img"
+    public_folder: "static/img"
+    path: "{{title}}/index"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
