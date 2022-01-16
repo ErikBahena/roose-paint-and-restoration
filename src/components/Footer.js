@@ -9,6 +9,9 @@ import brandImg4 from "../assets/img/brand/brand-4.png";
 import brandImg5 from "../assets/img/brand/brand-5.png";
 import brandImg6 from "../assets/img/brand/brand-6.png";
 
+import { formatPhonePlain } from "../helpers";
+import siteInfo from "../../site/settings/siteInfo.json";
+
 export default function Footer() {
   return (
     <footer>
@@ -47,7 +50,7 @@ export default function Footer() {
               <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6">
                 <div className="footer__widget mb-50">
                   <div className="footer__widget-top">
-                    <h3 className="footer__widget-title">About Comapny</h3>
+                    <h3 className="footer__widget-title">About Company</h3>
                   </div>
                   <div className="footer__widget-content">
                     <div className="footer__widget-about">
@@ -110,7 +113,9 @@ export default function Footer() {
                   <div className="footer__widget-content">
                     <div className="footer__info">
                       <ul>
-                        <li className="d-flex align-items-start">
+                        {
+                          // only bring in if site.fullBusinessAddress is provided
+                          /* <li className="d-flex align-items-start">
                           <div className="footer__info-icon mr-20">
                             <i className="fal fa-map-marker-alt" />
                           </div>
@@ -123,15 +128,16 @@ export default function Footer() {
                               30 Main Street, New York
                             </a>
                           </div>
-                        </li>
+                        </li> */
+                        }
                         <li className="d-flex align-items-start">
                           <div className="footer__info-icon mr-20">
                             <i className="far fa-envelope-open" />
                           </div>
                           <div className="footer__info-text">
                             <h4>Email Us</h4>
-                            <a href="mailto:support@gmail.com">
-                              support@gmail.com
+                            <a href={`mailto:${siteInfo.supportEmail}`}>
+                              {siteInfo.supportEmail}
                             </a>
                           </div>
                         </li>
@@ -141,7 +147,9 @@ export default function Footer() {
                           </div>
                           <div className="footer__info-text">
                             <h4>Phone Us</h4>
-                            <a href="tel:+012-345-6789">+012 (344) 678 99</a>
+                            <a href={`tel:${formatPhonePlain(siteInfo.phone)}`}>
+                              {siteInfo.phone}
+                            </a>
                           </div>
                         </li>
                       </ul>

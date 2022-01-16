@@ -1,4 +1,6 @@
 import React from "react";
+import siteInfo from "../../site/settings/siteInfo.json";
+import { formatPhonePlain } from "../helpers";
 
 export default function HeaderTop() {
   return (
@@ -14,18 +16,19 @@ export default function HeaderTop() {
                       target="_blank"
                       href="https://www.google.com/maps/place/Dhaka/@23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873"
                     >
-                      <i className="far fa-map-marker-alt" /> 20 Main Street,
-                      USA
+                      <i className="far fa-map-marker-alt" />{" "}
+                      {siteInfo.headerAddress}
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:support@gmail.com">
-                      <i className="far fa-envelope-open" /> support@gmail.com
+                    <a href={`mailto:${siteInfo.supportEmail}`}>
+                      <i className="far fa-envelope-open" />{" "}
+                      {siteInfo.supportEmail}
                     </a>
                   </li>
                   <li>
-                    <a href="tel:+012-345-6789">
-                      <i className="fal fa-phone" /> +012 (345) 6789
+                    <a href={`tel:${formatPhonePlain(siteInfo.phone)}`}>
+                      <i className="fal fa-phone" /> {siteInfo.phone}
                     </a>
                   </li>
                 </ul>
