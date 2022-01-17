@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 export default function BackToTop() {
   useEffect(() => {
@@ -25,6 +25,13 @@ export default function BackToTop() {
           behavior: "smooth",
         })
       }
+      onKeyDown={() =>
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        })
+      }
+      role="button"
     >
       <svg
         className="progress-circle svg-content"

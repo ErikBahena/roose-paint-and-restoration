@@ -59,7 +59,7 @@ export default function Footer() {
                         voluptaem accusantium emque laudantium totam rem aperiam
                       </p>
                       <div className="footer__logo">
-                        <a href="index.html">
+                        <a href="/">
                           <img
                             src={darkLogo}
                             alt="logo"
@@ -83,22 +83,13 @@ export default function Footer() {
                     <div className="footer__link">
                       <ul>
                         <li>
-                          <a href="#">Residential Interior</a>
+                          <a href="/">Residential Interior</a>
                         </li>
                         <li>
-                          <a href="#">Commercial Interior</a>
+                          <a href="/">Commercial Interior</a>
                         </li>
                         <li>
-                          <a href="#">Industrial Interior</a>
-                        </li>
-                        <li>
-                          <a href="#">Roof Servicing</a>
-                        </li>
-                        <li>
-                          <a href="#">Color Mixing</a>
-                        </li>
-                        <li>
-                          <a href="#">Painting &amp; Decoration</a>
+                          <a href="/">Industrial Interior</a>
                         </li>
                       </ul>
                     </div>
@@ -193,23 +184,17 @@ export default function Footer() {
                   <div className="footer__social">
                     <ul>
                       <li>
-                        <a href="#">
+                        <a
+                          href={siteInfo.facebookLink}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fab fa-facebook-f" />
                         </a>
                       </li>
                       <li>
-                        <a href="#">
-                          <i className="fab fa-twitter" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
+                        <a href="/">
                           <i className="fab fa-youtube" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin" />
                         </a>
                       </li>
                     </ul>

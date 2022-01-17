@@ -4,7 +4,7 @@ import GalleryPost from "../../templates/GalleryPost";
 import { graphql } from "gatsby";
 
 const index = ({ data, location }) => {
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.allMarkdownRemark.nodes;
 
   return (
     <>
@@ -26,7 +26,7 @@ const index = ({ data, location }) => {
           <div className="row">
             {posts &&
               posts.map((post) => (
-                <GalleryPost key={post.node.id} {...post.node.frontmatter} />
+                <GalleryPost key={post.id} {...post.frontmatter} />
               ))}
           </div>
           <div className="row">
@@ -46,17 +46,17 @@ const index = ({ data, location }) => {
 
 export const query = graphql`
   {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date
-            description
-            image {
-              publicURL
-            }
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(content/galleryPosts)/" } }
+    ) {
+      nodes {
+        id
+        frontmatter {
+          date
+          title
+          description
+          image {
+            publicURL
           }
         }
       }

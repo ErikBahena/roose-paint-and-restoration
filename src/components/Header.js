@@ -116,12 +116,13 @@ export default function Header() {
                     <a
                       href="https://www.facebook.com/roosepaint/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <i className="fab fa-facebook-f" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" target="_blank">
+                    <a href="/" target="_blank" rel="noreferrer">
                       <i className="fab fa-youtube" />
                     </a>
                   </li>

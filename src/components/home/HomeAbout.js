@@ -12,10 +12,10 @@ export default function HomeAbout() {
           <div className="col-xxl-7 col-xl-6 col-lg-5">
             <div className="about__thumb about__triangle p-relative">
               <div className="about__thumb-1 w-img">
-                <img src={aboutImg1} />
+                <img src={aboutImg1} alt="" />
               </div>
               <div className="about__thumb-2 text-end">
-                <img src={aboutImg2} />
+                <img src={aboutImg2} alt="" />
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function HomeAbout() {
               <div className="about__author d-sm-flex align-items-center">
                 <div className="about__author-content d-flex align-items-center mr-35">
                   <div className="about__author-avater mr-20">
-                    <img src={ceoImage} />
+                    <img src={ceoImage} alt="company owner" />
                   </div>
                   <div className="about__author-info">
                     <h3>Jose E. Swisher</h3>
@@ -48,7 +48,7 @@ export default function HomeAbout() {
                   </div>
                 </div>
                 <div className="about__author-signature">
-                  <img src={signature} />
+                  <img src={signature} alt="company owner signature" />
                 </div>
               </div>
             </div>

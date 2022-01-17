@@ -14,6 +14,7 @@ export default function HeaderTop() {
                   <li>
                     <a
                       target="_blank"
+                      rel="noreferrer"
                       href="https://www.google.com/maps/place/Aberdeen,+WA"
                     >
                       <i className="far fa-map-marker-alt" />{" "}

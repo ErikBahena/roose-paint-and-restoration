@@ -1,30 +1,25 @@
 import React from "react";
 import HomeService from "../templates/HomeService";
+import { useStaticQuery, graphql } from "gatsby";
 
-const mockServices = [
-  {
-    title: "Interior",
-    description: "here is a breig description",
-    id: "1234adf",
-  },
-  {
-    title: "Exterior",
-    description: "here is a breig description",
-    id: "14adf",
-  },
-  {
-    title: "Residential",
-    description: "here is a breig description",
-    id: "1234a323df",
-  },
-  {
-    title: "Commercial",
-    description: "here is a breig description",
-    id: "1asdf234adf",
-  },
-];
+const Services = () => {
+  const services = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(content/services)/" } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+            shortDescription
+            homeImage
+          }
+        }
+      }
+    }
+  `);
 
-export default function Services() {
   return (
     <section className="services__area p-relative z-index-11 pt-130 pb-55">
       <div
@@ -45,11 +40,14 @@ export default function Services() {
           </div>
         </div>
         <div className="row">
-          {mockServices.map((service) => {
-            return <HomeService key={service.id} {...service} />;
-          })}
+          {services &&
+            services.allMarkdownRemark.nodes.map((service) => {
+              return <HomeService key={service.id} {...service} />;
+            })}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Services;
