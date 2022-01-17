@@ -1,8 +1,24 @@
 import React, { useEffect } from "react";
 import logo from "../assets/img/logo/lightLogo.png";
 import { Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 export default function Header() {
+  const services = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(content/services)/" } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  `);
+
   useEffect(() => {
     window.addEventListener("scroll", isSticky);
     return () => {
@@ -17,14 +33,6 @@ export default function Header() {
       ? header.classList.add("sticky")
       : header.classList.remove("sticky");
   };
-
-  const isPartiallyActive = ({ isPartiallyCurrent }) => {
-    return isPartiallyCurrent ? { className: "active" } : null;
-  };
-
-  const PartialNavLink = (props) => (
-    <Link getProps={isPartiallyActive} {...props} />
-  );
 
   return (
     <div
@@ -69,23 +77,14 @@ export default function Header() {
                         Services <i className="far fa-angle-down" />
                       </Link>
                       <ul className="submenu">
-                        <li>
-                          <PartialNavLink
-                            to="/services/interior"
-                            activeClassName="active"
-                          >
-                            Interior
-                          </PartialNavLink>
-                        </li>
-                        <li>
-                          <Link to="/services/exterior">Exterior</Link>
-                        </li>
-                        <li>
-                          <Link to="/services/residential">Residential</Link>
-                        </li>
-                        <li>
-                          <Link to="/services/commercial">Commercial</Link>
-                        </li>
+                        {services &&
+                          services.allMarkdownRemark.nodes.map((service) => (
+                            <li key={service.id}>
+                              <Link to="/services/interior">
+                                {service.frontmatter.title}
+                              </Link>
+                            </li>
+                          ))}
                       </ul>
                     </li>
                     <li>
