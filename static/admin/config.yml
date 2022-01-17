@@ -181,3 +181,12 @@ collections:
                   name: "companyOwnerSignature",
                   widget: "image",
                 }
+  - name: "homeServicesInfo"
+    label: "Home Services Info"
+    files:
+      - label: "Home Services Info"
+        name: homeServices
+        file: site/settings/homeServices.json
+        fields:
+          - { label: "Section Name", name: "sectionName", widget: "string" }
+          - { label: "Section Header", name: "sectionHeader", widget: "string" }
