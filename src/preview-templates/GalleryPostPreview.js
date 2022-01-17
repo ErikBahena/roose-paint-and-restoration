@@ -1,40 +1,34 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
 
-export const GalleryPostTemplate = ({ title, content, contentComponent }) => {
+export const GalleryPostPreview = ({ entry, widgetFor, fieldsMetaData }) => {
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-            </div>
-          </div>
+    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+      hello
+      {/* <div className="portfolio__item-3 mb-30 p-relative fix">
+      <div className="portfolio__thumb w-img">
+        <img src={`${data.image.publicURL}`} alt="gallery post" />
+      </div>
+      <div className="portfolio__content-3 transition-3 d-flex align-items-center justify-content-between">
+        <div className="portfolio__content-3-inner">
+          <h3 className="portfolio__title-3">{data.title}</h3>
+          <p>{data.description}</p>
+        </div>
+        <div className="portfolio__plus-3 transition-3">
+          <a href={`${data.image.publicURL}`} className="popup-image">
+            <i className="far fa-plus" />
+          </a>
         </div>
       </div>
-    </section>
+    </div> */}
+    </div>
   );
 };
 
-GalleryPostTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-};
+// GalleryPostPreview.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   content: PropTypes.string,
+//   contentComponent: PropTypes.func,
+// };
 
-export default GalleryPostTemplate;
-
-export const GalleryPostTemplateQuery = graphql`
-  query GalleryPosts($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
-      }
-    }
-  }
-`;
+export default GalleryPostPreview;

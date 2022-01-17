@@ -127,3 +127,57 @@ collections:
           name: "resultsDescription",
           widget: "text",
         }
+  - name: "homeAbout"
+    label: "Home About Info"
+    files:
+      - label: "Home About Info"
+        name: homeAbout
+        file: site/settings/homeAbout.json
+        fields:
+          - { label: "Section Name", name: "sectionName", widget: "string" }
+          - { label: "Section Header", name: "sectionHeader", widget: "string" }
+          - {
+              label: "Section SubHeader",
+              name: "sectionSubheader",
+              widget: "string",
+            }
+          - {
+              label: "Section Description",
+              name: "sectionDescription",
+              widget: "text",
+            }
+          - {
+              label: "Company Owner Name",
+              name: "companyOwnerName",
+              widget: "string",
+            }
+          - {
+              label: "Company Owner Title",
+              name: "companyOwnerTitle",
+              widget: "string",
+            }
+          - label: "Images"
+            name: "images"
+            collapsed: false
+            widget: "list"
+            fields:
+              - {
+                  label: "Large About Image",
+                  name: "largeAboutImage",
+                  widget: "image",
+                }
+              - {
+                  label: "Circle About Image",
+                  name: "circleAboutImage",
+                  widget: "image",
+                }
+              - {
+                  label: "Company Owner Image",
+                  name: "companyOwnerImage",
+                  widget: "image",
+                }
+              - {
+                  label: "Company Owner Signature",
+                  name: "companyOwnerSignature",
+                  widget: "image",
+                }
