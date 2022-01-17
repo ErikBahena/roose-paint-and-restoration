@@ -90,3 +90,40 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
+    media_folder: "/"
+    public_folder: "/"
+    path: "{{title}}/index"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Short Description",
+          name: "shortDescription",
+          widget: "string",
+        }
+      - { label: "Home Facing Image", name: "homeImage", widget: "image" }
+      - { label: "Details Facing Image", name: "detailsImage", widget: "image" }
+      - {
+          label: "Details Facing Description",
+          name: "detailsDescription",
+          widget: "text",
+        }
+      - {
+          label: "Details Facing Features Description",
+          name: "detailsFeaturesDescription",
+          widget: "text",
+        }
+      - { label: "Before Image", name: "beforeImage", widget: "image" }
+      - { label: "After Image", name: "afterImage", widget: "image" }
+      - {
+          label: "Results Description",
+          name: "resultsDescription",
+          widget: "text",
+        }
