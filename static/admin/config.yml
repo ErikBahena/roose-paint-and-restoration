@@ -36,6 +36,16 @@ collections:
         file: site/settings/siteInfo.json
         fields:
           - { label: "Header Address", name: "headerAddress", widget: "string" }
+          - {
+              label: "Google Maps Address",
+              name: "googleMapsAddressLink",
+              widget: "string",
+            }
+          - {
+              label: "Google Maps Embed Link",
+              name: "googleMapsEmbedLink",
+              widget: "string",
+            }
           - label: "Full Business Address"
             name: "fullBusinessAddress"
             widget: "object"

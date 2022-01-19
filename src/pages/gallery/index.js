@@ -29,15 +29,6 @@ const index = ({ data, location }) => {
                 <GalleryPost key={post.id} {...post.frontmatter} />
               ))}
           </div>
-          <div className="row">
-            <div className="col-xxl-12">
-              <div className="portfolio__more text-center mt-50">
-                <a href="portfolio.html" className="r-btn r-btn-yellow">
-                  view more project <i className="far fa-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </>

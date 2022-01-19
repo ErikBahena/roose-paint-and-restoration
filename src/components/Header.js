@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import logo from "../assets/img/logo/lightLogo.png";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
+import siteInfo from "../../site/settings/siteInfo.json";
 
-export default function Header() {
+export default function Header({ handleMenuToggle }) {
   const services = useStaticQuery(graphql`
     {
       allMarkdownRemark(
@@ -113,7 +114,7 @@ export default function Header() {
                 <ul>
                   <li>
                     <a
-                      href="https://www.facebook.com/roosepaint/"
+                      href={siteInfo.facebookLink}
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -121,16 +122,32 @@ export default function Header() {
                     </a>
                   </li>
                   <li>
-                    <a href="/" target="_blank" rel="noreferrer">
-                      <i className="fab fa-youtube" />
+                    <a
+                      href={siteInfo.googleMapsAddressLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="fab fa-google" />
                     </a>
                   </li>
+                  {siteInfo.youtubeLink && (
+                    <li>
+                      <a
+                        href={siteInfo.youtubeLink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <i className="fab fa-youtube" />
+                      </a>
+                    </li>
+                  )}
                 </ul>
               </div>
               <div className="header__action">
                 <button
                   type="button"
                   className="dot-hamburger-btn sidebar-toggle-btn"
+                  onClick={handleMenuToggle}
                 >
                   <span />
                   <span />

@@ -2,12 +2,12 @@ import React from "react";
 
 import darkLogo from "../assets/img/logo/darkLogo.png";
 
-import brandImg1 from "../assets/img/brand/brand-1.png";
-import brandImg2 from "../assets/img/brand/brand-2.png";
-import brandImg3 from "../assets/img/brand/brand-3.png";
-import brandImg4 from "../assets/img/brand/brand-4.png";
-import brandImg5 from "../assets/img/brand/brand-5.png";
-import brandImg6 from "../assets/img/brand/brand-6.png";
+// import brandImg1 from "../assets/img/brand/brand-1.png";
+// import brandImg2 from "../assets/img/brand/brand-2.png";
+// import brandImg3 from "../assets/img/brand/brand-3.png";
+// import brandImg4 from "../assets/img/brand/brand-4.png";
+// import brandImg5 from "../assets/img/brand/brand-5.png";
+// import brandImg6 from "../assets/img/brand/brand-6.png";
 
 import { formatPhonePlain } from "../helpers";
 import siteInfo from "../../site/settings/siteInfo.json";
@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="footer__area black-bg">
         <div className="footer__top pb-35">
           <div className="container">
-            <div className="row">
+            {/* <div className="row">
               <div className="col-xxl-12">
                 <div className="brand__wrapper brand__bg">
                   <div className="brand__slider swiper-container pt-75 pb-80 black-bg-4">
@@ -45,7 +45,7 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="row">
               <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6">
                 <div className="footer__widget mb-50">
@@ -83,6 +83,18 @@ export default function Footer() {
                     <div className="footer__link">
                       <ul>
                         <li>
+                          <a href="/gallery">The Gallery</a>
+                        </li>
+                        <li>
+                          <a href="/">Home Page</a>
+                        </li>
+                        <li>
+                          <a href="/about">About Page</a>
+                        </li>
+                        <li>
+                          <a href="/contact">Contact Page</a>
+                        </li>
+                        <li>
                           <a href="/">Residential Interior</a>
                         </li>
                         <li>
@@ -104,9 +116,7 @@ export default function Footer() {
                   <div className="footer__widget-content">
                     <div className="footer__info">
                       <ul>
-                        {
-                          // only bring in if site.fullBusinessAddress is provided
-                          /* <li className="d-flex align-items-start">
+                        <li className="d-flex align-items-start">
                           <div className="footer__info-icon mr-20">
                             <i className="fal fa-map-marker-alt" />
                           </div>
@@ -114,13 +124,13 @@ export default function Footer() {
                             <h4>Locations</h4>
                             <a
                               target="_blank"
-                              href="https://www.google.com/maps/place/Dhaka/@23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873"
+                              href={siteInfo.googleMapsAddressLink}
                             >
-                              30 Main Street, New York
+                              {siteInfo?.fullBusinessAddress ||
+                                siteInfo?.headerAddress}
                             </a>
                           </div>
-                        </li> */
-                        }
+                        </li>
                         <li className="d-flex align-items-start">
                           <div className="footer__info-icon mr-20">
                             <i className="far fa-envelope-open" />
@@ -193,16 +203,31 @@ export default function Footer() {
                         </a>
                       </li>
                       <li>
-                        <a href="/">
-                          <i className="fab fa-youtube" />
+                        <a
+                          href={siteInfo.googleMapsAddressLink}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <i className="fab fa-google" />
                         </a>
                       </li>
+                      {siteInfo.youtubeLink && (
+                        <li>
+                          <a
+                            href={siteInfo.youtubeLink}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <i className="fab fa-youtube" />
+                          </a>
+                        </li>
+                      )}
                     </ul>
                   </div>
                 </div>
                 <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6">
                   <div className="footer__copyright text-sm-end">
-                    <p>© 2021 Roxce All Rights Reserved</p>
+                    <p>© {siteInfo.copyRight}</p>
                   </div>
                 </div>
               </div>

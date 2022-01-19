@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import "../assets/scss/main.scss";
 
@@ -21,9 +21,14 @@ import HeaderTop from "../components/HeaderTop";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
+import SideBar from "../components/SideBar";
 
 const Layout = ({ children, data }) => {
-  // const { title, description } = useSiteMetadata();
+  const [sideBarOpen, setSiteBarOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setSiteBarOpen(!sideBarOpen);
+  };
 
   return (
     <div>
@@ -31,8 +36,9 @@ const Layout = ({ children, data }) => {
       <BackToTop />
       <div className="header__area">
         <HeaderTop />
-        <Header />
+        <Header handleMenuToggle={handleMenuToggle} />
       </div>
+      {sideBarOpen && <SideBar handleMenuToggle={handleMenuToggle} />}
 
       <div>{children}</div>
 
