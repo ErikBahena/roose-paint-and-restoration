@@ -32,7 +32,13 @@ const Layout = ({ children, data }) => {
 
   return (
     <div>
-      <Helmet />
+      <Helmet>
+        <link
+          href="../../static/admin/config.yml"
+          type="text/yaml"
+          rel="cms-config-url"
+        />
+      </Helmet>
       <BackToTop />
       <div className="header__area">
         <HeaderTop />
