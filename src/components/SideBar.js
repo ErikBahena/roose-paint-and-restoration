@@ -1,5 +1,6 @@
 import React from "react";
 import siteInfo from "../../site/settings/siteInfo.json";
+import { Link } from "gatsby";
 import { formatPhonePlain } from "../helpers";
 
 export default function SideBar({ handleMenuToggle }) {
@@ -23,14 +24,54 @@ export default function SideBar({ handleMenuToggle }) {
                 <img src={"../assets/img/logo/logo.png"} alt="logo" />
               </a>
             </div>
-            <div className="sidebar__search mb-25">
-              <form action="#">
-                <input type="text" placeholder="What are you searching for?" />
-                <button type="submit">
-                  <i className="far fa-search" />
-                </button>
-              </form>
+
+            <div className="sidebar__contact mt-30 mb-20">
+              <h4>Quick Links</h4>
+              <div className="sidebar__contact-text">
+                <Link to="/" className="pr-10 pb-8" onClick={handleMenuToggle}>
+                  Home{" "}
+                </Link>
+                <Link
+                  to="/about"
+                  className="pr-10 pb-8"
+                  onClick={handleMenuToggle}
+                >
+                  About{" "}
+                </Link>
+                <Link
+                  to="/contact"
+                  className="pr-10 pb-8"
+                  onClick={handleMenuToggle}
+                >
+                  Contact{" "}
+                </Link>
+              </div>
+
+              <div className="sidebar__contact-text">
+                <Link
+                  to="/services"
+                  className="pr-10 pb-8"
+                  onClick={handleMenuToggle}
+                >
+                  Services{" "}
+                </Link>
+                <Link
+                  to="/gallery"
+                  className="pr-10 pb-8"
+                  onClick={handleMenuToggle}
+                >
+                  Gallery{" "}
+                </Link>
+                <Link
+                  to="/blog"
+                  className="pr-10 pb-8"
+                  onClick={handleMenuToggle}
+                >
+                  Blog
+                </Link>
+              </div>
             </div>
+
             <div className="mobile-menu fix" />
             <div className="sidebar__text d-none d-lg-block">
               <p>

@@ -5678,7 +5678,8 @@ p {
 /*  18. PAGE TITLE CSS START
 /*----------------------------------------*/
 .page__title {
-  font-size: 85px;
+  font-size: 70px;
+  /* color: #2c3941; */
   color: #ffffff;
   line-height: 1;
   text-transform: capitalize;

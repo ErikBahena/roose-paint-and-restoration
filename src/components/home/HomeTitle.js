@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 export default function HomeTitle() {
   return (
@@ -28,16 +29,16 @@ export default function HomeTitle() {
                       data-animation="fadeInUp"
                       data-delay=".6s"
                     >
-                      <a
+                      <Link to="/services" className="r-btn">
+                        our services
+                        <i className="far fa-arrow-right" />
+                      </Link>
+                      {/* <a
                         href="contact.html"
                         className="r-btn r-btn-green mr-10"
                       >
-                        get started <i className="far fa-arrow-right" />
-                      </a>
-                      <a href="services.html" className="r-btn">
-                        our services
-                        <i className="far fa-arrow-right" />
-                      </a>
+                        contact us <i className="far fa-arrow-right" />
+                      </a> */}
                     </div>
                   </div>
                 </div>
