@@ -30,7 +30,7 @@ export default function Header({ handleMenuToggle }) {
   const isSticky = (e) => {
     const header = document.querySelector("#header-sticky");
     const scrollTop = window.scrollY;
-    scrollTop >= 100
+    scrollTop >= 150
       ? header.classList.add("sticky")
       : header.classList.remove("sticky");
   };
