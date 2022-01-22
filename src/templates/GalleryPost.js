@@ -14,7 +14,7 @@ export default function GalleryPost(data) {
           </div>
           <div className="portfolio__plus-3 transition-3">
             <a href={`${data.image.publicURL}`} className="popup-image">
-              <i className="far fa-plus" />
+              <i className="far fa-search-plus" />
             </a>
           </div>
         </div>

@@ -9,7 +9,7 @@ import darkLogo from "../assets/img/logo/darkLogo.png";
 // import brandImg5 from "../assets/img/brand/brand-5.png";
 // import brandImg6 from "../assets/img/brand/brand-6.png";
 
-import { formatPhonePlain } from "../helpers";
+import { formatPhonePlain, isToday } from "../helpers";
 import siteInfo from "../../site/settings/siteInfo.json";
 
 export default function Footer() {
@@ -50,14 +50,34 @@ export default function Footer() {
               <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6">
                 <div className="footer__widget mb-50">
                   <div className="footer__widget-top">
-                    <h3 className="footer__widget-title">About Company</h3>
+                    <h3 className="footer__widget-title">Business Hours</h3>
                   </div>
                   <div className="footer__widget-content">
                     <div className="footer__widget-about">
-                      <p>
-                        Sed ut perspiciati unde omnis iste natus error sit
-                        voluptaem accusantium emque laudantium totam rem aperiam
-                      </p>
+                      <ul>
+                        <li className={isToday("Monday") && "active"}>
+                          Monday: <span>8:00 AM - 5:00 PM</span>
+                        </li>
+                        <li className={isToday("Tuesday") && "active"}>
+                          Tuesday: <span>8:00 AM - 5:00 PM</span>
+                        </li>
+                        <li className={isToday("Wednesday") && "active"}>
+                          Wednesday: <span>8:00 AM - 5:00 PM</span>
+                        </li>
+                        <li className={isToday("Thursday") && "active"}>
+                          Thursday: <span>8:00 AM - 5:00 PM</span>
+                        </li>
+                        <li className={isToday("Friday") && "active"}>
+                          Friday: <span>8:00 AM - 5:00 PM</span>
+                        </li>
+                        <li
+                          className={isToday("Saturday", "Sunday") && "active"}
+                        >
+                          Saturday & Sunday: <span>Closed</span>
+                        </li>
+                        {/* <li>Sunday: Closed</li> */}
+                      </ul>
+                      <p></p>
                       <div className="footer__logo">
                         <a href="/">
                           <img

@@ -3176,7 +3176,7 @@ p {
   width: 55px;
   height: 55px;
   line-height: 57px;
-  background: #fad105;
+  background: #f38321d0;
   color: #222328;
   text-align: center;
 }
@@ -5992,6 +5992,28 @@ p {
 /*----------------------------------------*/
 /*  00. FOOTER CSS START
 /*----------------------------------------*/
+.footer__widget-about ul li {
+  color: white;
+  font-size: 16px;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__widget-about ul li span {
+  color: #a7c1d1;
+  padding-left: 3px;
+}
+.onSideBar ul li {
+  color: #677a85;
+}
+.onSideBar ul li span {
+  color: #677a85;
+  padding-left: 3px;
+}
+.footer__widget-about ul li.active {
+  color: #f38321;
+}
+
 .footer__pr-50 {
   padding-right: 50px;
 }

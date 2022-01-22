@@ -1,7 +1,7 @@
 import React from "react";
 import siteInfo from "../../site/settings/siteInfo.json";
 import { Link } from "gatsby";
-import { formatPhonePlain } from "../helpers";
+import { formatPhonePlain, isToday } from "../helpers";
 
 export default function SideBar({ handleMenuToggle }) {
   return (
@@ -26,24 +26,50 @@ export default function SideBar({ handleMenuToggle }) {
             </div>
 
             <div className="sidebar__contact mt-30 mb-20">
+              <h4>Business Hours</h4>
+              <div className="footer__widget-about onSideBar">
+                <ul>
+                  <li className={isToday("Monday") && "active"}>
+                    Monday: <span>8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li className={isToday("Tuesday") && "active"}>
+                    Tuesday: <span>8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li className={isToday("Wednesday") && "active"}>
+                    Wednesday: <span>8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li className={isToday("Thursday") && "active"}>
+                    Thursday: <span>8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li className={isToday("Friday") && "active"}>
+                    Friday: <span>8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li className={isToday("Saturday", "Sunday") && "active"}>
+                    Saturday & Sunday: <span>Closed</span>
+                  </li>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+            <div className="sidebar__contact mt-30 mb-20">
               <h4>Quick Links</h4>
               <div className="sidebar__contact-text">
                 <Link to="/" className="pr-10 pb-8" onClick={handleMenuToggle}>
-                  Home{" "}
+                  Home
                 </Link>
                 <Link
                   to="/about"
                   className="pr-10 pb-8"
                   onClick={handleMenuToggle}
                 >
-                  About{" "}
+                  About
                 </Link>
                 <Link
                   to="/contact"
                   className="pr-10 pb-8"
                   onClick={handleMenuToggle}
                 >
-                  Contact{" "}
+                  Contact
                 </Link>
               </div>
 
@@ -53,14 +79,14 @@ export default function SideBar({ handleMenuToggle }) {
                   className="pr-10 pb-8"
                   onClick={handleMenuToggle}
                 >
-                  Services{" "}
+                  Services
                 </Link>
                 <Link
                   to="/gallery"
                   className="pr-10 pb-8"
                   onClick={handleMenuToggle}
                 >
-                  Gallery{" "}
+                  Gallery
                 </Link>
                 <Link
                   to="/blog"
