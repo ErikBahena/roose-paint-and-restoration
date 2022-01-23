@@ -36,27 +36,6 @@ export default function HeaderTop() {
               </div>
             </div>
           </div>
-          <div className="col-xxl-6 col-xl-4 col-lg-4">
-            <div className="header__top-right d-flex align-items-center justify-content-end">
-              <div className="header__search p-relative mr-20">
-                <form action="#">
-                  <input type="text" placeholder="Search here" />
-                  <button type="submit">
-                    <i className="far fa-search" />
-                  </button>
-                </form>
-              </div>
-              <div className="header__lang">
-                <select>
-                  <option>English</option>
-                  <option>Bangla</option>
-                  <option>Bangla</option>
-                  <option>Bangla</option>
-                  <option>Bangla</option>
-                </select>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

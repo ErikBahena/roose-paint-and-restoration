@@ -6005,6 +6005,7 @@ p {
 }
 .onSideBar ul li {
   color: #677a85;
+  margin-bottom: 0;
 }
 .onSideBar ul li span {
   color: #677a85;
@@ -6402,3 +6403,34 @@ p {
 }
 
 /*# sourceMappingURL=style.css.map */
+/* Facebook Testimonials */
+
+.elfsight-app-94fc04d5-34b7-4a90-b8ff-ebdb2466d351 {
+  height: max-content;
+  width: 90%;
+  margin-bottom: 60px;
+}
+
+#eapps-facebook-reviews-94fc04d5-34b7-4a90-b8ff-ebdb2466d351
+  > div
+  > div
+  > div.WidgetTitle__Container-sc-173f1y-0.iHQKTj
+  > div
+  > div
+  > div {
+  font-size: 48px;
+  line-height: 1.1;
+
+  padding-bottom: 45px;
+  padding-top: 50px;
+}
+
+#eapps-facebook-reviews-94fc04d5-34b7-4a90-b8ff-ebdb2466d351 > div > a {
+  display: none !important;
+}
+
+.testimonials_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

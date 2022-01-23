@@ -31,7 +31,10 @@ export default function AboutWhy() {
               <div className="why__item-wrapper">
                 <div className="why__item-2 d-flex align-items-start">
                   <div className="why__icon-2 mr-30">
-                    <img src="assets/img/why/icon/why-icon-1.png" alt />
+                    <img
+                      src="assets/img/why/icon/why-icon-1.png"
+                      alt="about page why icon"
+                    />
                   </div>
                   <div className="why__content-2">
                     <h3 className="why__title-2">PDCA Certified Member</h3>
@@ -43,7 +46,10 @@ export default function AboutWhy() {
                 </div>
                 <div className="why__item-2 d-flex align-items-start">
                   <div className="why__icon-2 mr-30">
-                    <img src="assets/img/why/icon/why-icon-2.png" alt />
+                    <img
+                      src="assets/img/why/icon/why-icon-2.png"
+                      alt="about page why icon"
+                    />
                   </div>
                   <div className="why__content-2">
                     <h3 className="why__title-2">Flexible Schedule Options.</h3>
@@ -55,7 +61,10 @@ export default function AboutWhy() {
                 </div>
                 <div className="why__item-2 d-flex align-items-start">
                   <div className="why__icon-2 mr-30">
-                    <img src="assets/img/why/icon/why-icon-3.png" alt />
+                    <img
+                      src="assets/img/why/icon/why-icon-3.png"
+                      alt="about page why icon"
+                    />
                   </div>
                   <div className="why__content-2">
                     <h3 className="why__title-2">
