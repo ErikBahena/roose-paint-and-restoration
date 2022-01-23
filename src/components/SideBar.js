@@ -24,33 +24,7 @@ export default function SideBar({ handleMenuToggle }) {
                 <img src={"../assets/img/logo/logo.png"} alt="logo" />
               </a>
             </div>
-
-            <div className="sidebar__contact mt-30 mb-20">
-              <h4>Business Hours</h4>
-              <div className="footer__widget-about onSideBar">
-                <ul>
-                  <li className={isToday("Monday") && "active"}>
-                    Monday: <span>8:00 AM - 5:00 PM</span>
-                  </li>
-                  <li className={isToday("Tuesday") && "active"}>
-                    Tuesday: <span>8:00 AM - 5:00 PM</span>
-                  </li>
-                  <li className={isToday("Wednesday") && "active"}>
-                    Wednesday: <span>8:00 AM - 5:00 PM</span>
-                  </li>
-                  <li className={isToday("Thursday") && "active"}>
-                    Thursday: <span>8:00 AM - 5:00 PM</span>
-                  </li>
-                  <li className={isToday("Friday") && "active"}>
-                    Friday: <span>8:00 AM - 5:00 PM</span>
-                  </li>
-                  <li className={isToday("Saturday", "Sunday") && "active"}>
-                    Saturday & Sunday: <span>Closed</span>
-                  </li>
-                </ul>
-                <p></p>
-              </div>
-            </div>
+            {/* Quick Links */}
             <div className="sidebar__contact mt-30 mb-20">
               <h4>Quick Links</h4>
               <div className="sidebar__contact-text">
@@ -95,6 +69,33 @@ export default function SideBar({ handleMenuToggle }) {
                 >
                   Blog
                 </Link>
+              </div>
+            </div>
+            {/* Business Hours */}
+            <div className="sidebar__contact mt-30 mb-20">
+              <h4>Business Hours</h4>
+              <div className="footer__widget-about onSideBar">
+                <ul>
+                  <li className={isToday("Monday") && "active"}>
+                    Monday: <span>8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li className={isToday("Tuesday") && "active"}>
+                    Tuesday: <span>8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li className={isToday("Wednesday") && "active"}>
+                    Wednesday: <span>8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li className={isToday("Thursday") && "active"}>
+                    Thursday: <span>8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li className={isToday("Friday") && "active"}>
+                    Friday: <span>8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li className={isToday("Saturday", "Sunday") && "active"}>
+                    Saturday & Sunday: <span>Closed</span>
+                  </li>
+                </ul>
+                <p></p>
               </div>
             </div>
 
