@@ -118,7 +118,7 @@ collections:
           name: "shortDescription",
           widget: "string",
         }
-      - { label: "Home Facing Image", name: "homeImage", widget: "image" }
+      - { label: "Home Facing Image", name: "home_image", widget: "image" }
       - { label: "Details Facing Image", name: "detailsImage", widget: "image" }
       - {
           label: "Details Facing Description",

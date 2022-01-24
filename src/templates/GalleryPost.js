@@ -5,7 +5,10 @@ export default function GalleryPost(data) {
     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
       <div className="portfolio__item-3 mb-30 p-relative fix">
         <div className="portfolio__thumb w-img">
-          <img src={`${data.image.publicURL}`} alt="gallery post" />
+          <img
+            src={`${data?.image?.publicURL || data?.bg?.toString()}`}
+            alt="gallery post"
+          />
         </div>
         <div className="portfolio__content-3 transition-3 d-flex align-items-center justify-content-between">
           <div className="portfolio__content-3-inner">
@@ -13,7 +16,10 @@ export default function GalleryPost(data) {
             <p>{data.description}</p>
           </div>
           <div className="portfolio__plus-3 transition-3">
-            <a href={`${data.image.publicURL}`} className="popup-image">
+            <a
+              href={`${data?.image?.publicURL || data?.bg?.toString()}`}
+              className="popup-image"
+            >
               <i className="far fa-search-plus" />
             </a>
           </div>
