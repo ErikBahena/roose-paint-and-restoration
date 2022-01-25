@@ -14,6 +14,7 @@ export default function Header({ handleMenuToggle }) {
           id
           frontmatter {
             title
+            urlRoute
           }
         }
       }
@@ -81,7 +82,10 @@ export default function Header({ handleMenuToggle }) {
                         {services &&
                           services.allMarkdownRemark.nodes.map((service) => (
                             <li key={service.id}>
-                              <Link to="/services/interior">
+                              <Link
+                                to={`/services/${service.frontmatter.urlRoute}`}
+                                activeClassName="active"
+                              >
                                 {service.frontmatter.title}
                               </Link>
                             </li>

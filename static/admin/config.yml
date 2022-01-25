@@ -105,13 +105,14 @@ collections:
     folder: "content/services"
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{title}}"
-    media_folder: "/"
-    public_folder: "/"
+    media_folder: "/images"
+    public_folder: "/images"
     path: "{{title}}/index"
     editor:
       preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Url Route", name: "urlRoute", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - {
           label: "Short Description",

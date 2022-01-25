@@ -1,6 +1,7 @@
 import React from "react";
 import HomeService from "../templates/HomeService";
 import { useStaticQuery, graphql } from "gatsby";
+// serviceDetailsPath: gatsbyPath(filePath: "/services/{Service.title}")
 
 const Services = () => {
   const services = useStaticQuery(graphql`
@@ -14,6 +15,7 @@ const Services = () => {
             title
             shortDescription
             homeImage
+            urlRoute
           }
         }
       }

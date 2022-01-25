@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 import darkLogo from "../assets/img/logo/darkLogo.png";
 
@@ -103,16 +104,16 @@ export default function Footer() {
                     <div className="footer__link">
                       <ul>
                         <li>
-                          <a href="/gallery">The Gallery</a>
+                          <Link to="/gallery">The Gallery</Link>
                         </li>
                         <li>
-                          <a href="/">Home Page</a>
+                          <Link to="/">Home Page</Link>
                         </li>
                         <li>
-                          <a href="/about">About Page</a>
+                          <Link to="/about">About Page</Link>
                         </li>
                         <li>
-                          <a href="/contact">Contact Page</a>
+                          <Link to="/contact">Contact Page</Link>
                         </li>
                         <li>
                           <a href="/">Residential Interior</a>
