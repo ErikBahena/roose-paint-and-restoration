@@ -29,9 +29,9 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "settings"
-    label: "Settings"
+    label: "General Site Info"
     files:
-      - label: "Site Info"
+      - label: "Info"
         name: contact_info
         file: site/settings/siteInfo.json
         fields:
@@ -138,66 +138,51 @@ collections:
           name: "resultsDescription",
           widget: "text",
         }
-  - name: "homeAbout"
-    label: "Home About Info"
-    files:
-      - label: "Home About Info"
-        name: homeAbout
-        file: site/settings/homeAbout.json
-        fields:
-          - { label: "Section Name", name: "sectionName", widget: "string" }
-          - { label: "Section Header", name: "sectionHeader", widget: "string" }
-          - {
-              label: "Section SubHeader",
-              name: "sectionSubheader",
-              widget: "string",
-            }
-          - {
-              label: "Section Description",
-              name: "sectionDescription",
-              widget: "text",
-            }
-          - {
-              label: "Company Owner Name",
-              name: "companyOwnerName",
-              widget: "string",
-            }
-          - {
-              label: "Company Owner Title",
-              name: "companyOwnerTitle",
-              widget: "string",
-            }
-          - label: "Images"
-            name: "images"
-            collapsed: false
-            widget: "list"
-            fields:
-              - {
-                  label: "Large About Image",
-                  name: "largeAboutImage",
-                  widget: "image",
-                }
-              - {
-                  label: "Circle About Image",
-                  name: "circleAboutImage",
-                  widget: "image",
-                }
-              - {
-                  label: "Company Owner Image",
-                  name: "companyOwnerImage",
-                  widget: "image",
-                }
-              - {
-                  label: "Company Owner Signature",
-                  name: "companyOwnerSignature",
-                  widget: "image",
-                }
-  - name: "homeServicesInfo"
-    label: "Home Services Info"
-    files:
-      - label: "Home Services Info"
-        name: homeServices
-        file: site/settings/homeServices.json
-        fields:
-          - { label: "Section Name", name: "sectionName", widget: "string" }
-          - { label: "Section Header", name: "sectionHeader", widget: "string" }
+  - name: "homeContent"
+    label: "Home Page Content"
+    folder: "content/homeContent"
+    create: true
+    media_folder: "/static/img"
+    public_folder: "/static/img"
+    path: "{{mainTagline}}/index"
+    slug: "{{year}}-{{month}}-{{day}}_{{title}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Tagline", name: "mainTagline", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Title", name: "mainTitle", widget: "string" }
+      - { label: "Button Text", name: "buttonText", widget: "string" }
+      - { label: "Title Background Image", name: "mainImage", widget: "image" }
+      - { label: "Large About Image", name: "largeAboutImage", widget: "image" }
+      - {
+          label: "Circle About Image",
+          name: "circleAboutImage",
+          widget: "image",
+        }
+      - { label: "About Tagline", name: "aboutTagline", widget: "string" }
+      - { label: "About Title", name: "aboutTitle", widget: "string" }
+      - { label: "About Subtitle", name: "aboutSubtitle", widget: "string" }
+      - { label: "About Description", name: "aboutDescription", widget: "text" }
+      - {
+          label: "Company Owner Image",
+          name: "companyOwnerImage",
+          widget: "image",
+        }
+      - {
+          label: "Company Owner Signature",
+          name: "companyOwnerSignature",
+          widget: "image",
+        }
+      - {
+          label: "Company Owner Name",
+          name: "companyOwnerName",
+          widget: "string",
+        }
+      - {
+          label: "Company Owner Title",
+          name: "companyOwnerTitle",
+          widget: "string",
+        }
+      - { label: "Services Tagline", name: "servicesTagline", widget: "string" }
+      - { label: "Services Title", name: "servicesTitle", widget: "string" }

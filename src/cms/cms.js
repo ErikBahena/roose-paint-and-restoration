@@ -1,6 +1,7 @@
 import CMS from "netlify-cms-app";
 import GalleryPostPreview from "./preview-templates/GalleryPostPreview";
 import ServicePreview from "./preview-templates/ServicePreview";
+import HomePagePreview from "./preview-templates/HomePagePreview";
 
 import mainStyle from "../assets/css/style.css";
 import defaultStyle from "../assets/css/default.css";
@@ -18,3 +19,5 @@ CMS.registerPreviewStyle(fontAwesome5Pro, { raw: true });
 
 CMS.registerPreviewTemplate("galleryPosts", GalleryPostPreview);
 CMS.registerPreviewTemplate("services", ServicePreview);
+
+CMS.registerPreviewTemplate("homeContent", HomePagePreview);
