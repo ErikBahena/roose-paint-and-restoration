@@ -99,7 +99,7 @@ export default function Header({ handleMenuToggle }) {
                     </li>
                     <li>
                       <Link to="/blog" activeClassName="active">
-                        News
+                        Blog
                       </Link>
                     </li>
                     <li>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-
-import darkLogo from "../assets/img/logo/darkLogo.png";
+import { useStaticQuery, graphql } from "gatsby";
 
 // import brandImg1 from "../assets/img/brand/brand-1.png";
 // import brandImg2 from "../assets/img/brand/brand-2.png";
@@ -10,10 +9,28 @@ import darkLogo from "../assets/img/logo/darkLogo.png";
 // import brandImg5 from "../assets/img/brand/brand-5.png";
 // import brandImg6 from "../assets/img/brand/brand-6.png";
 
+import darkLogo from "../assets/img/logo/darkLogo.png";
+
 import { formatPhonePlain, isToday } from "../helpers";
 import siteInfo from "../../site/settings/siteInfo.json";
 
 export default function Footer() {
+  const services = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(content/services)/" } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+            urlRoute
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <footer>
       <div className="footer__area black-bg">
@@ -104,26 +121,31 @@ export default function Footer() {
                     <div className="footer__link">
                       <ul>
                         <li>
-                          <Link to="/gallery">The Gallery</Link>
-                        </li>
-                        <li>
                           <Link to="/">Home Page</Link>
                         </li>
                         <li>
                           <Link to="/about">About Page</Link>
                         </li>
                         <li>
+                          <Link to="/gallery">The Gallery</Link>
+                        </li>
+                        <li>
                           <Link to="/contact">Contact Page</Link>
                         </li>
                         <li>
-                          <a href="/">Residential Interior</a>
+                          <Link to="/blog">Our Blog</Link>
                         </li>
-                        <li>
-                          <a href="/">Commercial Interior</a>
-                        </li>
-                        <li>
-                          <a href="/">Industrial Interior</a>
-                        </li>
+                        {services &&
+                          services.allMarkdownRemark.nodes.map((service) => (
+                            <li key={service.id}>
+                              <Link
+                                to={`/services/${service.frontmatter.urlRoute}`}
+                                activeClassName="active"
+                              >
+                                {service.frontmatter.title}
+                              </Link>
+                            </li>
+                          ))}
                       </ul>
                     </div>
                   </div>
