@@ -1,13 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-/*  companyOwnerImage {
-          publicURL
-        }
-        companyOwnerSignature {
-          publicURL
-        }*/
-
 export default function HomeAbout() {
   const data = useStaticQuery(graphql`
     {
@@ -20,16 +13,32 @@ export default function HomeAbout() {
           companyOwnerName
           companyOwnerTitle
           circleAboutImage {
-            publicURL
+            childImageSharp {
+              fluid(maxWidth: 360, maxHeight: 360) {
+                src
+              }
+            }
           }
           largeAboutImage {
-            publicURL
+            childImageSharp {
+              fluid(maxWidth: 570, maxHeight: 575) {
+                src
+              }
+            }
           }
           companyOwnerImage {
-            publicURL
+            childImageSharp {
+              fluid(maxWidth: 75, maxHeight: 75) {
+                src
+              }
+            }
           }
           companyOwnerSignature {
-            publicURL
+            childImageSharp {
+              fluid(maxWidth: 120, maxHeight: 75) {
+                src
+              }
+            }
           }
         }
       }
@@ -45,16 +54,20 @@ export default function HomeAbout() {
       companyOwnerName={data.markdownRemark.frontmatter.companyOwnerName}
       companyOwnerTitle={data.markdownRemark.frontmatter.companyOwnerTitle}
       largeAboutImage={
-        data.markdownRemark.frontmatter.largeAboutImage.publicURL
+        data.markdownRemark.frontmatter.largeAboutImage.childImageSharp.fluid
+          .src
       }
       circleAboutImage={
-        data.markdownRemark.frontmatter.circleAboutImage.publicURL
+        data.markdownRemark.frontmatter.circleAboutImage.childImageSharp.fluid
+          .src
       }
       companyOwnerImage={
-        data.markdownRemark.frontmatter.companyOwnerImage.publicURL
+        data.markdownRemark.frontmatter.companyOwnerImage.childImageSharp.fluid
+          .src
       }
       companyOwnerSignature={
-        data.markdownRemark.frontmatter.companyOwnerSignature.publicURL
+        data.markdownRemark.frontmatter.companyOwnerSignature.childImageSharp
+          .fluid.src
       }
     />
   );

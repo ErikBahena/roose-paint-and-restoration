@@ -15,7 +15,10 @@ export default function ServiceDetails({ data, location }) {
               <div className="services__details-wrapper">
                 <div className="services__details-thumb w-img mb-45">
                   <img
-                    src={data.markdownRemark.frontmatter.detailsImage.publicURL}
+                    src={
+                      data.markdownRemark.frontmatter.detailsImage
+                        .childImageSharp.fluid.src
+                    }
                     alt="service details image"
                   />
                 </div>
@@ -38,7 +41,7 @@ export default function ServiceDetails({ data, location }) {
                         <img
                           src={
                             data.markdownRemark.frontmatter.beforeImage
-                              .publicURL
+                              .childImageSharp.fluid.src
                           }
                           alt="service details before"
                         />
@@ -48,7 +51,8 @@ export default function ServiceDetails({ data, location }) {
                       <div className="services__details-thumb-inner mb-30">
                         <img
                           src={
-                            data.markdownRemark.frontmatter.afterImage.publicURL
+                            data.markdownRemark.frontmatter.afterImage
+                              .childImageSharp.fluid.src
                           }
                           alt="service details after"
                         />
@@ -146,17 +150,29 @@ export const query = graphql`
       frontmatter {
         title
         afterImage {
-          publicURL
+          childImageSharp {
+            fluid(maxWidth: 370, maxHeight: 370) {
+              src
+            }
+          }
         }
         beforeImage {
-          publicURL
+          childImageSharp {
+            fluid(maxWidth: 370, maxHeight: 370) {
+              src
+            }
+          }
         }
         date
         description
         detailsDescription
         detailsFeaturesDescription
         detailsImage {
-          publicURL
+          childImageSharp {
+            fluid(maxWidth: 770, maxHeight: 495) {
+              src
+            }
+          }
         }
         resultsDescription
       }

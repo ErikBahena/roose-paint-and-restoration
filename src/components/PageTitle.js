@@ -14,7 +14,7 @@ export default function PageTitle({ location }) {
             <div className="page__title-wrapper">
               <h2 className="page__title">
                 {location.pathname
-                  .slice(location.pathname.lastIndexOf("/"))
+                  .slice(location.pathname.lastIndexOf("/") + 1)
                   .toLowerCase()}
               </h2>
             </div>

@@ -10,7 +10,11 @@ export default function HomeTitle() {
           mainTagline
           mainTitle
           mainImage {
-            publicURL
+            childImageSharp {
+              fluid(maxWidth: 1920, maxHeight: 816) {
+                src
+              }
+            }
           }
           buttonText
         }
@@ -21,7 +25,9 @@ export default function HomeTitle() {
     <HomeTitleTemplate
       title={data.markdownRemark.frontmatter.mainTitle}
       tagline={data.markdownRemark.frontmatter.mainTagline}
-      image={data.markdownRemark.frontmatter.mainImage.publicURL}
+      image={
+        data.markdownRemark.frontmatter.mainImage.childImageSharp.fluid.src
+      }
       buttonText={data.markdownRemark.frontmatter.buttonText}
     />
   );

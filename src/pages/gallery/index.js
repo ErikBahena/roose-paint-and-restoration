@@ -47,7 +47,11 @@ export const query = graphql`
           title
           description
           image {
-            publicURL
+            childImageSharp {
+              fluid(maxWidth: 370, maxHeight: 370) {
+                src
+              }
+            }
           }
         }
       }

@@ -14,7 +14,11 @@ const Services = () => {
             title
             shortDescription
             homeImage {
-              publicURL
+              childImageSharp {
+                fluid(maxWidth: 370, maxHeight: 250) {
+                  src
+                }
+              }
             }
             urlRoute
           }

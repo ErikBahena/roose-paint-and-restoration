@@ -7,7 +7,9 @@ export default function HomeService(data) {
       <div className="services__item p-relative mb-30">
         <div className="services__thumb w-img">
           <img
-            src={data.bg || data.frontmatter?.homeImage.publicURL}
+            src={
+              data.bg || data.frontmatter?.homeImage.childImageSharp.fluid.src
+            }
             alt="service"
           />
         </div>

@@ -5,6 +5,7 @@ import AboutTeam from "../components/about/AboutTeam";
 import AboutWhy from "../components/about/AboutWhy";
 import Testimonials from "../components/Testimonials";
 import { Helmet } from "react-helmet";
+import Services from "../components/Services";
 
 export default function about({ location }) {
   return (
@@ -15,7 +16,7 @@ export default function about({ location }) {
       <PageTitle location={location} />
       <MainSection />
       <AboutWhy />
-      <AboutTeam />
+      <Services />
       <Testimonials />
     </>
   );

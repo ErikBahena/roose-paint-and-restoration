@@ -6,7 +6,9 @@ export default function GalleryPost(data) {
       <div className="portfolio__item-3 mb-30 p-relative fix">
         <div className="portfolio__thumb w-img">
           <img
-            src={`${data?.image?.publicURL || data?.bg?.toString()}`}
+            src={`${
+              data?.image?.childImageSharp.fluid.src || data?.bg?.toString()
+            }`}
             alt="gallery post"
           />
         </div>
