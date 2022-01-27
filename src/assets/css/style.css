@@ -3846,54 +3846,19 @@ p {
 /*----------------------------------------*/
 /*  10. VIDEO CSS START
 /*----------------------------------------*/
-.video__play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-.video__play-btn {
-  width: 100px;
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
-  background: #ff4328;
-  color: #ffffff;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-  display: inline-block;
-}
-.video__play-btn:hover {
-  color: #ff4328;
-  background: #ffffff;
-}
-.video__overlay {
+
+.video-container {
   position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
 }
-.video__overlay::after {
+.video-container iframe {
   position: absolute;
-  content: "";
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(44, 57, 65, 0.3);
 }
-
-.video-mb--160 {
-  margin-bottom: -160px;
-}
-@media (max-width: 575px) {
-  .video-mb--160 {
-    margin-bottom: -80px;
-  }
-}
-
 /*----------------------------------------*/
 /*  11. Blog CSS START
 /*----------------------------------------*/

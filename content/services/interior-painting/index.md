@@ -23,4 +23,5 @@ detailsFeaturesDescription: Here is a Features Description Explaining the
 beforeImage: /images/exteriorExample.jpeg
 afterImage: /images/exteriorExample.jpeg
 resultsDescription: Here is a description about the results of the service provided
+youtubeVideoEmbedLink:
 ---

@@ -10,4 +10,5 @@ detailsFeaturesDescription: features description
 beforeImage: /static/img/exteriorpaintingexmpl.jpeg
 afterImage: /static/img/exteriorpaintingexmpl.jpeg
 resultsDescription: results description
+youtubeVideoEmbedLink: https://www.youtube.com/embed/fTDRUqXy6IM
 ---

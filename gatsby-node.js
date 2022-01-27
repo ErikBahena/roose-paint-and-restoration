@@ -13,7 +13,6 @@ exports.createPages = async ({ graphql, actions }) => {
         nodes {
           id
           frontmatter {
-            title
             urlRoute
           }
         }

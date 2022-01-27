@@ -7,7 +7,7 @@ import { graphql } from "gatsby";
 export default function ServiceDetails({ data, location }) {
   return (
     <main>
-      <PageTitle location={location} />
+      <PageTitle location={data.markdownRemark.frontmatter.title} />
       <section className="services__details-area pt-130 pb-130">
         <div className="container">
           <div className="row">
@@ -66,20 +66,20 @@ export default function ServiceDetails({ data, location }) {
                   </h3>
                   <p>{data.markdownRemark.frontmatter.resultsDescription}</p>
                 </div>
-                <div className="video__wrapper video__overlay w-img p-relative">
-                  <img
-                    src="assets/img/services/details/services-details-video.jpg"
-                    alt="service details video thumbnail"
-                  />
-                  <div className="video__play">
-                    <a
-                      href="https://youtu.be/-WRZI63emjs"
-                      className="video__play-btn popup-video"
-                    >
-                      <i className="fas fa-play" />
-                    </a>
+                {data.markdownRemark.frontmatter.youtubeVideoEmbedLink && (
+                  <div className="video-container">
+                    <iframe
+                      width="100%"
+                      src={
+                        data.markdownRemark.frontmatter.youtubeVideoEmbedLink
+                      }
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen="true"
+                    />
                   </div>
-                </div>
+                )}
               </div>
             </div>
             <div className="col-xxl-4 col-xl-4 col-lg-4">
@@ -149,6 +149,7 @@ export const query = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        youtubeVideoEmbedLink
         afterImage {
           childImageSharp {
             fluid(maxWidth: 370, maxHeight: 370) {

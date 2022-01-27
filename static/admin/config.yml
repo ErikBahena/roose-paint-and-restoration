@@ -160,6 +160,12 @@ collections:
           name: "resultsDescription",
           widget: "text",
         }
+      - {
+          label: "YouTube Video Emmbed Link",
+          name: "youtubeVideoEmbedLink",
+          widget: "string",
+          required: false,
+        }
   - name: "homeContent"
     label: "Home Page Content"
     folder: "content/homeContent"
