@@ -123,7 +123,7 @@ collections:
         }
       - {
           label: "Home Facing Image",
-          name: "home_image",
+          name: "homeImage",
           choose_url: false,
           widget: "image",
         }
