@@ -15,7 +15,7 @@ export default function ServiceDetails({ data, location }) {
               <div className="services__details-wrapper">
                 <div className="services__details-thumb w-img mb-45">
                   <img
-                    src={data.markdownRemark.frontmatter.detailsImage}
+                    src={data.markdownRemark.frontmatter.detailsImage.publicURL}
                     alt="service details image"
                   />
                 </div>
@@ -36,7 +36,10 @@ export default function ServiceDetails({ data, location }) {
                     <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6">
                       <div className="services__details-thumb-inner mb-30">
                         <img
-                          src={data.markdownRemark.frontmatter.beforeImage}
+                          src={
+                            data.markdownRemark.frontmatter.beforeImage
+                              .publicURL
+                          }
                           alt="service details before"
                         />
                       </div>
@@ -44,7 +47,9 @@ export default function ServiceDetails({ data, location }) {
                     <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6">
                       <div className="services__details-thumb-inner mb-30">
                         <img
-                          src={data.markdownRemark.frontmatter.afterImage}
+                          src={
+                            data.markdownRemark.frontmatter.afterImage.publicURL
+                          }
                           alt="service details after"
                         />
                       </div>
@@ -140,13 +145,19 @@ export const query = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        afterImage
-        beforeImage
+        afterImage {
+          publicURL
+        }
+        beforeImage {
+          publicURL
+        }
         date
         description
         detailsDescription
         detailsFeaturesDescription
-        detailsImage
+        detailsImage {
+          publicURL
+        }
         resultsDescription
       }
     }

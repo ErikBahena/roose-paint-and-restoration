@@ -1,7 +1,33 @@
 import React from "react";
 import { Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
-export default function HomeTitle({ title, image, buttonText, tagline }) {
+export default function HomeTitle() {
+  const data = useStaticQuery(graphql`
+    {
+      markdownRemark(fileAbsolutePath: { regex: "/(content/homeContent)/" }) {
+        frontmatter {
+          mainTagline
+          mainTitle
+          mainImage {
+            publicURL
+          }
+          buttonText
+        }
+      }
+    }
+  `);
+  return (
+    <HomeTitleTemplate
+      title={data.markdownRemark.frontmatter.mainTitle}
+      tagline={data.markdownRemark.frontmatter.mainTagline}
+      image={data.markdownRemark.frontmatter.mainImage.publicURL}
+      buttonText={data.markdownRemark.frontmatter.buttonText}
+    />
+  );
+}
+
+export const HomeTitleTemplate = ({ title, image, buttonText, tagline }) => {
   return (
     <section className="slider__area">
       <div className="slider__active swiper-container">
@@ -39,4 +65,4 @@ export default function HomeTitle({ title, image, buttonText, tagline }) {
       </div>
     </section>
   );
-}
+};

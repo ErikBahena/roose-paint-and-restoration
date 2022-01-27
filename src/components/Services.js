@@ -1,7 +1,6 @@
 import React from "react";
 import HomeService from "../templates/HomeService";
 import { useStaticQuery, graphql } from "gatsby";
-// serviceDetailsPath: gatsbyPath(filePath: "/services/{Service.title}")
 
 const Services = () => {
   const services = useStaticQuery(graphql`
@@ -14,14 +13,35 @@ const Services = () => {
           frontmatter {
             title
             shortDescription
-            homeImage
+            homeImage {
+              publicURL
+            }
             urlRoute
           }
+        }
+      }
+
+      markdownRemark(fileAbsolutePath: { regex: "/(content/homeContent)/" }) {
+        frontmatter {
+          servicesTitle
+          servicesTagline
         }
       }
     }
   `);
 
+  return (
+    <ServicesTemplate
+      services={services.allMarkdownRemark.nodes}
+      tagline={services.markdownRemark.frontmatter.servicesTagline}
+      title={services.markdownRemark.frontmatter.servicesTitle}
+    />
+  );
+};
+
+export default Services;
+
+export const ServicesTemplate = ({ tagline, title, services }) => {
   return (
     <section className="services__area p-relative z-index-11 pt-130 pb-55">
       <div
@@ -33,17 +53,15 @@ const Services = () => {
           <div className="col-xxl-8 offset-xxl-2 col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
             <div className="section__title-wrapper mb-80 text-center">
               <span className="section__title-pre section__title-pre-black center">
-                What We Offer
+                {tagline}
               </span>
-              <h2 className="section__title section__title-black">
-                We Help You For Made Your Dream Painting
-              </h2>
+              <h2 className="section__title section__title-black">{title}</h2>
             </div>
           </div>
         </div>
         <div className="row">
           {services &&
-            services.allMarkdownRemark.nodes.map((service) => {
+            services.map((service) => {
               return <HomeService key={service.id} {...service} />;
             })}
         </div>
@@ -51,5 +69,3 @@ const Services = () => {
     </section>
   );
 };
-
-export default Services;

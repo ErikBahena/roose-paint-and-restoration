@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logo from "../assets/img/logo/lightLogo.png";
+import logo from "../../static/img/logo/lightLogo.png";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import siteInfo from "../../site/settings/siteInfo.json";

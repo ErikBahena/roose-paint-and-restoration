@@ -6,7 +6,10 @@ export default function HomeService(data) {
     <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
       <div className="services__item p-relative mb-30">
         <div className="services__thumb w-img">
-          <img src={data.bg || data.frontmatter?.homeImage} alt="service" />
+          <img
+            src={data.bg || data.frontmatter?.homeImage.publicURL}
+            alt="service"
+          />
         </div>
         <div className="services__content text-center">
           <div className="services__icon">

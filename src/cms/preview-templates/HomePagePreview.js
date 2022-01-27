@@ -24,7 +24,17 @@ export default function HomePagePreview({ entry, getAsset }) {
     ),
   };
 
+  let servicesContent = {
+    tagline: entry.getIn(["data", "servicesTagline"]),
+    title: entry.getIn(["data", "servicesTitle"]),
+  };
+
   return (
-    <HomePage homeTitleContent={homeTitleContent} aboutContent={aboutContent} />
+    <HomePage
+      isPreview={true}
+      servicesContent={servicesContent}
+      homeTitleContent={homeTitleContent}
+      aboutContent={aboutContent}
+    />
   );
 }

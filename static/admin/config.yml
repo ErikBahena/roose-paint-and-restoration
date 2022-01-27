@@ -11,6 +11,8 @@ backend:
 local_backend: true
 media_folder: static/img
 public_folder: /img
+logo_url: https://d33wubrfki0l68.cloudfront.net/6749674d71524fae87977fff52b0a8707e08a800/31877/static/lightlogo-0eea8f26954d519c8fb75d40e97efffe.png
+display_url: https://roosepaint.com
 
 collections:
   - name: "blog"
@@ -90,7 +92,7 @@ collections:
     folder: "content/galleryPosts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{title}}"
-    media_folder: "static/img"
+    media_folder: "images"
     public_folder: "static/img"
     path: "{{title}}/index"
     editor:
@@ -99,14 +101,14 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image", name: "image", choose_url: false, widget: "image" }
   - name: "services"
     label: "Services"
     folder: "content/services"
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{title}}"
-    media_folder: "/images"
-    public_folder: "/images"
+    media_folder: "images"
+    public_folder: "/static/img"
     path: "{{title}}/index"
     editor:
       preview: true
@@ -119,8 +121,18 @@ collections:
           name: "shortDescription",
           widget: "string",
         }
-      - { label: "Home Facing Image", name: "home_image", widget: "image" }
-      - { label: "Details Facing Image", name: "detailsImage", widget: "image" }
+      - {
+          label: "Home Facing Image",
+          name: "home_image",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Details Facing Image",
+          name: "detailsImage",
+          choose_url: false,
+          widget: "image",
+        }
       - {
           label: "Details Facing Description",
           name: "detailsDescription",
@@ -131,8 +143,18 @@ collections:
           name: "detailsFeaturesDescription",
           widget: "text",
         }
-      - { label: "Before Image", name: "beforeImage", widget: "image" }
-      - { label: "After Image", name: "afterImage", widget: "image" }
+      - {
+          label: "Before Image",
+          name: "beforeImage",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "After Image",
+          name: "afterImage",
+          choose_url: false,
+          widget: "image",
+        }
       - {
           label: "Results Description",
           name: "resultsDescription",
@@ -141,21 +163,33 @@ collections:
   - name: "homeContent"
     label: "Home Page Content"
     folder: "content/homeContent"
-    create: true
-    media_folder: "/static/img"
+    create: false
+    media_folder: "images"
     public_folder: "/static/img"
-    path: "/main"
+    slug: "{{year}}-{{month}}-{{day}}_index"
     editor:
       preview: true
     fields:
       - { label: "Tagline", name: "mainTagline", widget: "string" }
       - { label: "Title", name: "mainTitle", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Button Text", name: "buttonText", widget: "string" }
-      - { label: "Title Background Image", name: "mainImage", widget: "image" }
-      - { label: "Large About Image", name: "largeAboutImage", widget: "image" }
+      - {
+          label: "Title Background Image",
+          name: "mainImage",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Large About Image",
+          name: "largeAboutImage",
+          choose_url: false,
+          widget: "image",
+        }
       - {
           label: "Circle About Image",
           name: "circleAboutImage",
+          choose_url: false,
           widget: "image",
         }
       - { label: "About Tagline", name: "aboutTagline", widget: "string" }
@@ -165,11 +199,13 @@ collections:
       - {
           label: "Company Owner Image",
           name: "companyOwnerImage",
+          choose_url: false,
           widget: "image",
         }
       - {
           label: "Company Owner Signature",
           name: "companyOwnerSignature",
+          choose_url: false,
           widget: "image",
         }
       - {

@@ -1,6 +1,66 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-export default function HomeAbout({
+/*  companyOwnerImage {
+          publicURL
+        }
+        companyOwnerSignature {
+          publicURL
+        }*/
+
+export default function HomeAbout() {
+  const data = useStaticQuery(graphql`
+    {
+      markdownRemark(fileAbsolutePath: { regex: "/(content/homeContent)/" }) {
+        frontmatter {
+          aboutDescription
+          aboutSubtitle
+          aboutTagline
+          aboutTitle
+          companyOwnerName
+          companyOwnerTitle
+          circleAboutImage {
+            publicURL
+          }
+          largeAboutImage {
+            publicURL
+          }
+          companyOwnerImage {
+            publicURL
+          }
+          companyOwnerSignature {
+            publicURL
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <HomeAboutTemplate
+      description={data.markdownRemark.frontmatter.aboutDescription}
+      subtitle={data.markdownRemark.frontmatter.aboutSubtitle}
+      tagline={data.markdownRemark.frontmatter.aboutTagline}
+      title={data.markdownRemark.frontmatter.aboutTitle}
+      companyOwnerName={data.markdownRemark.frontmatter.companyOwnerName}
+      companyOwnerTitle={data.markdownRemark.frontmatter.companyOwnerTitle}
+      largeAboutImage={
+        data.markdownRemark.frontmatter.largeAboutImage.publicURL
+      }
+      circleAboutImage={
+        data.markdownRemark.frontmatter.circleAboutImage.publicURL
+      }
+      companyOwnerImage={
+        data.markdownRemark.frontmatter.companyOwnerImage.publicURL
+      }
+      companyOwnerSignature={
+        data.markdownRemark.frontmatter.companyOwnerSignature.publicURL
+      }
+    />
+  );
+}
+
+export const HomeAboutTemplate = ({
   title,
   tagline,
   subtitle,
@@ -11,7 +71,7 @@ export default function HomeAbout({
   circleAboutImage,
   companyOwnerImage,
   companyOwnerSignature,
-}) {
+}) => {
   return (
     <section className="about__area pt-130 pb-130">
       <div className="container">
@@ -60,4 +120,4 @@ export default function HomeAbout({
       </div>
     </section>
   );
-}
+};

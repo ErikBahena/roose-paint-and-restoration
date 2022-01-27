@@ -9,7 +9,7 @@ import { useStaticQuery, graphql } from "gatsby";
 // import brandImg5 from "../assets/img/brand/brand-5.png";
 // import brandImg6 from "../assets/img/brand/brand-6.png";
 
-import darkLogo from "../assets/img/logo/darkLogo.png";
+import darkLogo from "../../static/img/logo/darkLogo.png";
 
 import { formatPhonePlain, isToday } from "../helpers";
 import siteInfo from "../../site/settings/siteInfo.json";
