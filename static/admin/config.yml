@@ -226,3 +226,127 @@ collections:
         }
       - { label: "Services Tagline", name: "servicesTagline", widget: "string" }
       - { label: "Services Title", name: "servicesTitle", widget: "string" }
+  - name: "aboutContent"
+    label: "About Page Content"
+    folder: "content/aboutContent"
+    create: true
+    media_folder: "images"
+    public_folder: "/static/img"
+    slug: "{{year}}-{{month}}-{{day}}_index"
+    editor:
+      preview: true
+    fields:
+      - { label: "Tagline", name: "mainTagline", widget: "string" }
+      - { label: "Title", name: "mainTitle", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+
+      - { label: "Card 1 Title", name: "card1Title", widget: "string" }
+      - {
+          label: "Card 1 Description",
+          name: "card1Description",
+          widget: "string",
+        }
+      - { label: "Card 1 Link", name: "card1Link", widget: "string" }
+
+      - { label: "Card 2 Title", name: "card2Title", widget: "string" }
+      - {
+          label: "Card 2 Description",
+          name: "card2Description",
+          widget: "string",
+        }
+      - { label: "Card 2 Link", name: "card2Link", widget: "string" }
+
+      - {
+          label: "Upper Left Image",
+          name: "upperLeftImage",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Upper Right Image",
+          name: "upperRightImage",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Lower Left Image",
+          name: "lowerLeftImage",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Lower Right Image",
+          name: "lowerRightImage",
+          choose_url: false,
+          widget: "image",
+        }
+
+      - {
+          label: "Section 2 Image",
+          name: "section2Image",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Section 2 Tagline",
+          name: "section2Tagline",
+          widget: "string",
+        }
+      - { label: "Section 2 Title", name: "section2Title", widget: "string" }
+      - {
+          label: "Section 2 Description",
+          name: "section2Description",
+          widget: "text",
+        }
+
+      - {
+          label: "Section 2 Descriptor 1 Image",
+          name: "section2Descriptor1Image",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Section 2 Descriptor 1 Title",
+          name: "section2Descriptor1Title",
+          widget: "text",
+        }
+      - {
+          label: "Section 2 Descriptor 1 Description",
+          name: "section2Descriptor1Description",
+          widget: "text",
+        }
+
+      - {
+          label: "Section 2 Descriptor 2 Image",
+          name: "section2Descriptor2Image",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Section 2 Descriptor 2 Title",
+          name: "section2Descriptor2Title",
+          widget: "text",
+        }
+      - {
+          label: "Section 2 Descriptor 2 Description",
+          name: "section2Descriptor2Description",
+          widget: "text",
+        }
+
+      - {
+          label: "Section 2 Descriptor 3 Image",
+          name: "section2Descriptor3Image",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Section 2 Descriptor 3 Title",
+          name: "section2Descriptor3Title",
+          widget: "text",
+        }
+      - {
+          label: "Section 2 Descriptor 3 Description",
+          name: "section2Descriptor3Description",
+          widget: "text",
+        }
