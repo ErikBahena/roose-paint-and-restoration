@@ -13,7 +13,7 @@ export default function PageTitle({ location }) {
           <div className="col-xxl-12">
             <div className="page__title-wrapper">
               <h2 className="page__title">
-                {!location.pathname
+                {!location?.pathname
                   ? `${location}`
                   : location?.pathname
                       .slice(location.pathname.lastIndexOf("/") + 1)
