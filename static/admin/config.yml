@@ -166,6 +166,31 @@ collections:
           widget: "string",
           required: false,
         }
+
+      - {
+          label: "Call to Action Image",
+          name: "actionImage",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
+          label: "Call to Action Tagline",
+          name: "actionTagline",
+          widget: "string",
+        }
+      - { label: "Call to Action Title", name: "actionTitle", widget: "string" }
+      - {
+          label: "Call to Action Button Text",
+          name: "actionButtonText",
+          widget: "string",
+          default: "Get Started",
+        }
+      - {
+          label: "Call to Action Button Link",
+          name: "actionButtonLink",
+          widget: "string",
+          default: "https://clienthub.getjobber.com/client_hubs/66a10fe9-55e4-46ed-b1f4-f244789fa028/public/work_request/new?source=social_media",
+        }
   - name: "homeContent"
     label: "Home Page Content"
     folder: "content/homeContent"
