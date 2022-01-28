@@ -13,7 +13,7 @@ export default function HomeService(data) {
       <div className="services__item p-relative mb-30">
         <div className="services__thumb w-img">
           <img
-            style={isLimit && { maxHeight: "370px", maxHeight: "370px" }}
+            style={isLimit && { maxWidth: "370px", maxHeight: "370px" }}
             src={
               data.bg || data.frontmatter?.homeImage.childImageSharp.fluid.src
             }
@@ -31,7 +31,7 @@ export default function HomeService(data) {
           </h3>
           <p>{data.description || data.frontmatter?.shortDescription}</p>
           <Link
-            to={`/services/${data.frontmatter?.urlRoute}` || "/"}
+            to={`/services/${data.frontmatter?.urlRoute}`}
             className="link-btn-2"
           >
             read more

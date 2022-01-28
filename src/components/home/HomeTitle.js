@@ -10,11 +10,7 @@ export default function HomeTitle() {
           mainTagline
           mainTitle
           mainImage {
-            childImageSharp {
-              fluid(maxWidth: 1920, maxHeight: 816) {
-                src
-              }
-            }
+            publicURL
           }
           buttonText
         }
@@ -25,9 +21,7 @@ export default function HomeTitle() {
     <HomeTitleTemplate
       title={data.markdownRemark.frontmatter.mainTitle}
       tagline={data.markdownRemark.frontmatter.mainTagline}
-      image={
-        data.markdownRemark.frontmatter.mainImage.childImageSharp.fluid.src
-      }
+      image={data.markdownRemark.frontmatter.mainImage.publicURL}
       buttonText={data.markdownRemark.frontmatter.buttonText}
     />
   );
@@ -41,7 +35,7 @@ export const HomeTitleTemplate = ({ title, image, buttonText, tagline }) => {
           <div
             className="single-slider swiper-slide slider__height slider__overlay d-flex align-items-center"
             style={{
-              backgroundImage: `url("${image || "/"}")`,
+              backgroundImage: `url("${image}")`,
             }}
           >
             <div className="container">

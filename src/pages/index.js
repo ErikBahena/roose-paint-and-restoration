@@ -13,7 +13,11 @@ export default function index({
   return (
     <>
       {isPreview ? <HomeTitleTemplate {...homeTitleContent} /> : <HomeTitle />}
-      {isPreview ? <HomeAboutTemplate {...aboutContent} /> : <HomeAbout />}
+      {isPreview ? (
+        <HomeAboutTemplate {...aboutContent} isPreview={isPreview} />
+      ) : (
+        <HomeAbout />
+      )}
       {isPreview ? <ServicesTemplate {...servicesContent} /> : <Services />}
       <Testimonials />
     </>

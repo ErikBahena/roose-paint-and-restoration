@@ -4,7 +4,7 @@ import Testimonials from "../components/Testimonials";
 import { Link } from "gatsby";
 import { graphql } from "gatsby";
 
-export default function ServiceDetails({ data, location }) {
+export default function ServiceDetails({ data }) {
   return (
     <main>
       <PageTitle location={data.markdownRemark.frontmatter.title} />
@@ -19,7 +19,7 @@ export default function ServiceDetails({ data, location }) {
                       data.markdownRemark.frontmatter.detailsImage
                         .childImageSharp.fluid.src
                     }
-                    alt="service details image"
+                    alt="service details"
                   />
                 </div>
                 <div className="services__details-text mb-25">
@@ -74,9 +74,9 @@ export default function ServiceDetails({ data, location }) {
                         data.markdownRemark.frontmatter.youtubeVideoEmbedLink
                       }
                       title="YouTube video player"
-                      frameborder="0"
+                      frameBorder="20"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen="true"
+                      allowFullScreen
                     />
                   </div>
                 )}
@@ -111,6 +111,7 @@ export default function ServiceDetails({ data, location }) {
                   />
                   <div className="services__sidebar-banner-content">
                     <h6>Need Help</h6>
+
                     <h4>Make An Appointment</h4>
                     <a
                       href="https://clienthub.getjobber.com/client_hubs/66a10fe9-55e4-46ed-b1f4-f244789fa028/public/work_request/new?source=social_media"

@@ -4,7 +4,7 @@ import MainSection, {
   MainSectionTemplate,
 } from "../components/about/MainSection";
 // import AboutTeam from "../components/about/AboutTeam";
-import AboutWhy from "../components/about/AboutWhy";
+import AboutWhy, { AboutWhyTemplate } from "../components/about/AboutWhy";
 import Testimonials from "../components/Testimonials";
 import { Helmet } from "react-helmet";
 import Services from "../components/Services";
@@ -20,12 +20,21 @@ export default function about({
       <Helmet>
         <script src="https://apps.elfsight.com/p/platform.js" defer />
       </Helmet>
-      <PageTitle location={location} />
+      <PageTitle location={isTemplate ? "About" : location} />
 
-      <MainSectionTemplate {...firstSectionContent} />
-      <AboutWhy />
+      {isTemplate ? (
+        <MainSectionTemplate {...firstSectionContent} isTemplate={isTemplate} />
+      ) : (
+        <MainSection />
+      )}
 
-      {/* <Services /> */}
+      {isTemplate ? (
+        <AboutWhyTemplate {...secondSectionContent} isTemplate={isTemplate} />
+      ) : (
+        <AboutWhy />
+      )}
+
+      {!isTemplate && <Services />}
       <Testimonials />
     </>
   );

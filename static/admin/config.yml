@@ -229,7 +229,7 @@ collections:
   - name: "aboutContent"
     label: "About Page Content"
     folder: "content/aboutContent"
-    create: true
+    create: false
     media_folder: "images"
     public_folder: "/static/img"
     slug: "{{year}}-{{month}}-{{day}}_index"

@@ -2,6 +2,7 @@ import React from "react";
 import siteInfo from "../../site/settings/siteInfo.json";
 import { Link } from "gatsby";
 import { formatPhonePlain, isToday } from "../helpers";
+import Logo from "../../static/img/logo/lightLogo.png";
 
 export default function SideBar({ handleMenuToggle }) {
   return (
@@ -20,9 +21,17 @@ export default function SideBar({ handleMenuToggle }) {
           </div>
           <div className="sidebar__content">
             <div className="sidebar__logo mb-40">
-              <a href="index.html">
-                <img src={"../assets/img/logo/logo.png"} alt="logo" />
-              </a>
+              <Link to="/">
+                <img
+                  src={Logo}
+                  style={{
+                    maxHeight: "100px",
+                    maxWidth: "maxContent",
+                  }}
+                  onClick={handleMenuToggle}
+                  alt="logo"
+                />
+              </Link>
             </div>
             {/* Quick Links */}
             <div className="sidebar__contact mt-30 mb-20">
@@ -99,21 +108,15 @@ export default function SideBar({ handleMenuToggle }) {
               </div>
             </div>
 
-            <div className="mobile-menu fix" />
-            <div className="sidebar__text d-none d-lg-block">
-              <p>
-                But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and will give you
-                a complete account of the system and expound the actual
-                teachings of the great explore
-              </p>
-            </div>
             <div className="sidebar__map d-none d-lg-block mb-15">
               <iframe
                 src={siteInfo.googleMapsEmbedLink}
                 loading="lazy"
-              ></iframe>
+                title="interactive google maps for business location"
+              />
             </div>
+
+            {/* Contact Info */}
             <div className="sidebar__contact mt-30 mb-20">
               <h4>Contact Info</h4>
               <ul>
@@ -122,7 +125,11 @@ export default function SideBar({ handleMenuToggle }) {
                     <i className="fal fa-map-marker-alt" />
                   </div>
                   <div className="sidebar__contact-text">
-                    <a target="_blank" href={siteInfo.googleMapsAddressLink}>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href={siteInfo.googleMapsAddressLink}
+                    >
                       {siteInfo.fullBusinessAddress || siteInfo.headerAddress}
                     </a>
                   </div>
@@ -149,6 +156,7 @@ export default function SideBar({ handleMenuToggle }) {
                 </li>
               </ul>
             </div>
+            {/* Socials */}
             <div className="sidebar__social">
               <ul>
                 <li>

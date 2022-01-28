@@ -1,18 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
-
-// import brandImg1 from "../assets/img/brand/brand-1.png";
-// import brandImg2 from "../assets/img/brand/brand-2.png";
-// import brandImg3 from "../assets/img/brand/brand-3.png";
-// import brandImg4 from "../assets/img/brand/brand-4.png";
-// import brandImg5 from "../assets/img/brand/brand-5.png";
-// import brandImg6 from "../assets/img/brand/brand-6.png";
-
-import darkLogo from "../../static/img/logo/darkLogo.png";
-
 import { formatPhonePlain, isToday } from "../helpers";
+
 import siteInfo from "../../site/settings/siteInfo.json";
+import darkLogo from "../../static/img/logo/darkLogo.png";
 
 export default function Footer() {
   const services = useStaticQuery(graphql`
@@ -167,6 +159,7 @@ export default function Footer() {
                             <h4>Locations</h4>
                             <a
                               target="_blank"
+                              rel="noreferrer"
                               href={siteInfo.googleMapsAddressLink}
                             >
                               {siteInfo?.fullBusinessAddress ||
