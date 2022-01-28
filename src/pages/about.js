@@ -6,8 +6,7 @@ import MainSection, {
 // import AboutTeam from "../components/about/AboutTeam";
 import AboutWhy, { AboutWhyTemplate } from "../components/about/AboutWhy";
 import Testimonials from "../components/Testimonials";
-import { Helmet } from "react-helmet";
-import Services from "../components/Services";
+// import Services from "../components/Services";
 
 export default function about({
   isTemplate,
@@ -17,9 +16,6 @@ export default function about({
 }) {
   return (
     <>
-      <Helmet>
-        <script src="https://apps.elfsight.com/p/platform.js" defer />
-      </Helmet>
       <PageTitle location={isTemplate ? "About" : location} />
 
       {isTemplate ? (
@@ -34,7 +30,7 @@ export default function about({
         <AboutWhy />
       )}
 
-      {!isTemplate && <Services />}
+      {/* {!isTemplate && <Services />} */}
       <Testimonials />
     </>
   );

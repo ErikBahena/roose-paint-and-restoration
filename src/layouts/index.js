@@ -28,6 +28,7 @@ const Layout = ({ children, data }) => {
           type="text/yaml"
           rel="cms-config-url"
         />
+        <script src="https://apps.elfsight.com/p/platform.js" defer />
       </Helmet>
 
       <div className="header__area">

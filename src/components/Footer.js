@@ -65,23 +65,25 @@ export default function Footer() {
                   <div className="footer__widget-content">
                     <div className="footer__widget-about">
                       <ul>
-                        <li className={isToday("Monday") && "active"}>
+                        <li className={isToday("Monday") ? "active" : ""}>
                           Monday: <span>8:00 AM - 5:00 PM</span>
                         </li>
-                        <li className={isToday("Tuesday") && "active"}>
+                        <li className={isToday("Tuesday") ? "active" : ""}>
                           Tuesday: <span>8:00 AM - 5:00 PM</span>
                         </li>
-                        <li className={isToday("Wednesday") && "active"}>
+                        <li className={isToday("Wednesday") ? "active" : ""}>
                           Wednesday: <span>8:00 AM - 5:00 PM</span>
                         </li>
-                        <li className={isToday("Thursday") && "active"}>
+                        <li className={isToday("Thursday") ? "active" : ""}>
                           Thursday: <span>8:00 AM - 5:00 PM</span>
                         </li>
-                        <li className={isToday("Friday") && "active"}>
+                        <li className={isToday("Friday") ? "active" : ""}>
                           Friday: <span>8:00 AM - 5:00 PM</span>
                         </li>
                         <li
-                          className={isToday("Saturday", "Sunday") && "active"}
+                          className={
+                            isToday("Saturday", "Sunday") ? "active" : ""
+                          }
                         >
                           Saturday & Sunday: <span>Closed</span>
                         </li>
