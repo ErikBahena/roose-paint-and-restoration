@@ -24,11 +24,7 @@ export default function Contact({ location }) {
           </div>
           <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
             <div className="contact__btn-3 contact__btn-4">
-              <a
-                href="https://clienthub.getjobber.com/client_hubs/66a10fe9-55e4-46ed-b1f4-f244789fa028/public/work_request/new?source=social_media"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={siteInfo.jobberLink} target="_blank" rel="noreferrer">
                 <button type="submit" className="r-btn r-btn-black w-100">
                   Request Services <i className="far fa-arrow-right" />
                 </button>

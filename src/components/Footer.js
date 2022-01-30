@@ -87,7 +87,6 @@ export default function Footer() {
                         >
                           Saturday & Sunday: <span>Closed</span>
                         </li>
-                        {/* <li>Sunday: Closed</li> */}
                       </ul>
                       <p></p>
                       <div className="footer__logo">
@@ -199,23 +198,25 @@ export default function Footer() {
               <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6">
                 <div className="footer__widget mb-50">
                   <div className="footer__widget-top">
-                    <h3 className="footer__widget-title">Newsletter</h3>
+                    <h3 className="footer__widget-title">Free Estimates</h3>
                   </div>
                   <div className="footer__widget-content">
                     <div className="footer__subscribe">
                       <p>
-                        Sed ut perspiciati unde omnis iste natus error sit
-                        voluptatem accusantium
+                        Click the button below, fill out the form, and we'll be
+                        with you shortly.
                       </p>
-                      <div className="footer__subscribe-form">
-                        <form action="#">
-                          <input type="email" placeholder="Enter Your Email" />
-                          <button type="submit" className="link-btn-2">
-                            subscribe
-                            <i className="far fa-arrow-right" />
-                            <i className="far fa-arrow-right" />
-                          </button>
-                        </form>
+                      <div className="footer__subscribe">
+                        <a
+                          href={siteInfo.jobberLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="link-btn-2"
+                        >
+                          Get Started
+                          <i className="far fa-arrow-right" />
+                          <i className="far fa-arrow-right" />
+                        </a>
                       </div>
                     </div>
                   </div>

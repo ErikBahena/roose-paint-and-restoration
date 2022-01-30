@@ -9,7 +9,7 @@ export default function AboutWhy() {
         frontmatter {
           section2Image {
             childImageSharp {
-              fluid(maxWidth: 369, maxHeight: 356) {
+              fixed(width: 369, height: 356, fit: INSIDE) {
                 src
               }
             }
@@ -19,7 +19,7 @@ export default function AboutWhy() {
           section2Description
           section2Descriptor1Image {
             childImageSharp {
-              fluid(maxWidth: 369, maxHeight: 356) {
+              fixed(height: 100, width: 100, fit: COVER) {
                 src
               }
             }
@@ -28,7 +28,7 @@ export default function AboutWhy() {
           section2Descriptor1Description
           section2Descriptor2Image {
             childImageSharp {
-              fluid(maxWidth: 369, maxHeight: 356) {
+              fixed(height: 100, width: 100, fit: COVER) {
                 src
               }
             }
@@ -37,7 +37,7 @@ export default function AboutWhy() {
           section2Descriptor2Description
           section2Descriptor3Image {
             childImageSharp {
-              fluid(maxWidth: 369, maxHeight: 356) {
+              fixed(height: 100, width: 100, fit: COVER) {
                 src
               }
             }
@@ -51,7 +51,7 @@ export default function AboutWhy() {
   return (
     <AboutWhyTemplate
       section2Image={
-        content.markdownRemark.frontmatter.section2Image.childImageSharp.fluid
+        content.markdownRemark.frontmatter.section2Image.childImageSharp.fixed
           .src
       }
       tagline={content.markdownRemark.frontmatter.section2Tagline}
@@ -65,7 +65,7 @@ export default function AboutWhy() {
       }
       descriptor1Image={
         content.markdownRemark.frontmatter.section2Descriptor1Image
-          .childImageSharp.fluid.src
+          .childImageSharp.fixed.src
       }
       descriptor2Title={
         content.markdownRemark.frontmatter.section2Descriptor2Title
@@ -75,7 +75,7 @@ export default function AboutWhy() {
       }
       descriptor2Image={
         content.markdownRemark.frontmatter.section2Descriptor2Image
-          .childImageSharp.fluid.src
+          .childImageSharp.fixed.src
       }
       descriptor3Title={
         content.markdownRemark.frontmatter.section2Descriptor3Title
@@ -85,7 +85,7 @@ export default function AboutWhy() {
       }
       descriptor3Image={
         content.markdownRemark.frontmatter.section2Descriptor3Image
-          .childImageSharp.fluid.src
+          .childImageSharp.fixed.src
       }
     />
   );

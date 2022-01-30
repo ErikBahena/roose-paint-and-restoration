@@ -18,3 +18,7 @@ export const isToday = (dayOfTheWeek, secondCheck) => {
   if (dt.split(" ")[0] === dayOfTheWeek) return true;
   if (dt.split(" ")[0] === secondCheck) return true;
 };
+
+export const alphanumericFilter = (str) => {
+  return str.replace(/[^A-Za-z0-9]/g, "");
+};
