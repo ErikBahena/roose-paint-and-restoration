@@ -1,31 +1,48 @@
 import React from "react";
 
-export default function Pagination({ paginationPageCount }) {
+export default function Pagination({
+  paginationPageCount,
+  handleIndexChange,
+  index,
+}) {
   const pageNumberArr = Array.from(
     { length: paginationPageCount },
     (_, i) => i + 1
   );
+
+  const handleArrowClick = (num) => {
+    const newIndex = num + index;
+
+    if (newIndex >= 0 && newIndex <= paginationPageCount) {
+      handleIndexChange(newIndex);
+    }
+  };
 
   return (
     <div className="basic-pagination">
       <nav>
         <ul>
           <li>
-            <a href="blog.html">
+            <div onClick={() => handleArrowClick(-1)}>
               <i className="far fa-angle-left" />
-            </a>
+            </div>
           </li>
-          {pageNumberArr.length > 1 &&
-            pageNumberArr.map((num) => (
-              <li>
-                <a href="blog.html">{num}</a>
-              </li>
-            ))}
+
+          {pageNumberArr.map((num) => (
+            <li>
+              <div
+                className={index + 1 === num && "active"}
+                onClick={() => handleIndexChange(num - 1)}
+              >
+                {num}
+              </div>
+            </li>
+          ))}
 
           <li>
-            <a href="blog.html">
+            <div onClick={() => handleArrowClick(1)}>
               <i className="far fa-angle-right" />
-            </a>
+            </div>
           </li>
         </ul>
       </nav>

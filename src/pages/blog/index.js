@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 
 import Pagination from "../../components/blog/Pagination";
@@ -6,10 +6,20 @@ import RecentPosts from "../../components/blog/RecentPosts";
 import PageTitle from "../../components/PageTitle";
 import BlogPost from "../../templates/BlogPost";
 
-function index({ location, data }) {
-  const blogPosts = data.allMarkdownRemark.edges;
+function Index({ location, data }) {
+  const allBlogPosts = data.allMarkdownRemark.edges;
 
-  const paginationPageCount = Math.round(blogPosts.length / 3);
+  const [index, setIndex] = useState(0);
+  const [currentBlogPosts, setCurrentBlogPosts] = useState(
+    allBlogPosts.slice(index * 3, index * 3 + 3)
+  );
+
+  const paginationPageCount = Math.round(allBlogPosts.length / 3);
+
+  const handleIndexChange = (newIndex) => {
+    setIndex(newIndex);
+    setCurrentBlogPosts(allBlogPosts.slice(newIndex * 3, newIndex * 3 + 3));
+  };
 
   return (
     <main>
@@ -20,17 +30,26 @@ function index({ location, data }) {
           <div className="row">
             <div className="col-xxl-8 col-xl-8 col-lg-8">
               <div className="postbox__wrapper pr-20">
-                {blogPosts
-                  ? blogPosts.map((postData) => (
-                      <BlogPost key={postData.node.id} {...postData.node} />
-                    ))
-                  : "No Posts"}
+                {allBlogPosts.length > 1 ? (
+                  currentBlogPosts.map((postData) => (
+                    <BlogPost key={postData.node.id} {...postData.node} />
+                  ))
+                ) : (
+                  <h2>No Current Blog Posts... </h2>
+                )}
+
                 {paginationPageCount > 1 && (
-                  <Pagination paginationPageCount={paginationPageCount} />
+                  <Pagination
+                    paginationPageCount={paginationPageCount}
+                    handleIndexChange={handleIndexChange}
+                    index={index}
+                  />
                 )}
               </div>
             </div>
-            <RecentPosts posts={blogPosts.slice(0, 3)} />
+            {allBlogPosts.length > 1 && (
+              <RecentPosts posts={allBlogPosts.slice(0, 3)} />
+            )}
           </div>
         </div>
       </section>
@@ -74,4 +93,4 @@ export const query = graphql`
   }
 `;
 
-export default index;
+export default Index;

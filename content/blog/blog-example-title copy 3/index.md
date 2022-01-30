@@ -1,7 +1,7 @@
 ---
 image: images/photo-164331.jpeg
 sidebarImage: images/photo-164331.jpeg
-title: Blog Example Title 2
+title: Blog Example Title 3
 date: 2022-01-27T22:29:01.664Z
 publisherName: Example Name
 description: here is a description that will show on the general blog page/ not the details page

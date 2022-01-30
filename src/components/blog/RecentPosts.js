@@ -1,5 +1,7 @@
 import React from "react";
-import { format, formatDistance, formatRelative, subDays } from "date-fns";
+import { alphanumericFilter } from "../../helpers";
+
+import { formatDistance, subDays } from "date-fns";
 import { Link } from "gatsby";
 
 export default function RecentPosts({ posts }) {
@@ -30,7 +32,7 @@ export default function RecentPosts({ posts }) {
                           <div className="rc__post-content">
                             <h3 className="rc__post-title">
                               <Link
-                                to={`/blog/${encodeURI(
+                                to={`/blog/${alphanumericFilter(
                                   post.node.frontmatter.title
                                 )}`}
                               >
