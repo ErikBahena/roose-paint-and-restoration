@@ -16,9 +16,9 @@ export default function RecentPosts({ posts }) {
             <div className="sidebar__post rc__post">
               <ul>
                 {posts &&
-                  posts.map((post) => {
+                  posts.map((post, i) => {
                     return (
-                      <li>
+                      <li key={i}>
                         <div className="rc__post d-flex align-items-center">
                           <div className="rc__post-thumb mr-20">
                             <img
