@@ -46,16 +46,7 @@ export default function Header({ handleMenuToggle }) {
           <div className="col-xxl-3 col-xl-2 col-lg-3 col-md-6 col-sm-6 col-6">
             <div className="logo">
               <Link to="/">
-                <img
-                  src={logo}
-                  alt="logo"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                    maxHeight: "100px",
-                    padding: "10px 0px",
-                  }}
-                />
+                <img src={logo} alt="logo" className="header__logo" />
               </Link>
             </div>
           </div>

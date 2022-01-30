@@ -850,14 +850,20 @@ p {
   .header__padding {
     padding-left: 0px;
     padding-right: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
+}
+.header__bottom img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100px;
+  padding: 10px 0px;
 }
 .header__bottom.sticky {
   left: 0;
   margin: auto;
-  position: fixed !important;
+  position: sticky;
   top: 0;
   width: 100%;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.07);
@@ -866,6 +872,19 @@ p {
   animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
   -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
   background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .header__bottom.sticky {
+    left: unset !important;
+    margin: auto;
+    position: unset !important;
+    top: unset !important;
+  }
+
+  .header__bottom img {
+    padding: 0px 0px;
+  }
 }
 .header__bottom.sticky.sticky-2 {
   background: #222328;
@@ -1315,6 +1334,11 @@ p {
 .sidebar__logo {
   padding-bottom: 20px;
   border-bottom: 1px solid #dedede;
+}
+@media (max-width: 575px) {
+  .sidebar__logo img {
+    max-width: 200px;
+  }
 }
 .sidebar__search {
   position: relative;
@@ -6228,7 +6252,7 @@ p {
 .footer__subscribe input::placeholder {
   color: #a7c1d1;
 }
-.footer__subscribe button {
+.footer__subscribe a {
   height: 50px;
   line-height: 50px;
   padding: 0 40px;
@@ -6236,19 +6260,19 @@ p {
   background: #f38321;
   color: #ffffff;
 }
-.footer__subscribe button i:last-child {
+.footer__subscribe a i:last-child {
   right: 38px;
 }
-.footer__subscribe button i:first-child {
+.footer__subscribe a i:first-child {
   right: 50px;
 }
-.footer__subscribe button:hover {
+.footer__subscribe a:hover {
   color: #ffffff;
 }
-.footer__subscribe button:hover i:last-child {
+.footer__subscribe a:hover i:last-child {
   right: 32px;
 }
-.footer__subscribe button:hover i:first-child {
+.footer__subscribe a:hover i:first-child {
   right: 38px;
 }
 .footer__subscribe-2 button {

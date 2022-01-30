@@ -1,8 +1,8 @@
 ---
-image: images/davisuko-5e5n49rwtba-unsplash.jpg
-sidebarImage: images/davisuko-5e5n49rwtba-unsplash.jpg
+image: images/photo-164331.jpeg
+sidebarImage: images/photo-164331.jpeg
 title: Blog Example Title
-date: 2022-01-28T22:29:01.664Z
+date: 2022-01-27T22:29:01.664Z
 publisherName: Example Name
 description: here is a description that will show on the general blog page/ not the details page
 ---
@@ -16,4 +16,4 @@ Here is some **content**
 
 1. test
 
-   ![some alt test](images/davisuko-5e5n49rwtba-unsplash.jpg "A title")
+   ![some alt test](images/photo-164331.jpeg "A title")
