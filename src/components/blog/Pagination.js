@@ -13,7 +13,7 @@ export default function Pagination({
   const handleArrowClick = (num) => {
     const newIndex = num + index;
 
-    if (newIndex >= 0 && newIndex <= paginationPageCount) {
+    if (newIndex >= 0 && newIndex <= paginationPageCount - 1) {
       handleIndexChange(newIndex);
     }
   };

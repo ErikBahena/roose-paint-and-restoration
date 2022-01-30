@@ -14,7 +14,7 @@ function Index({ location, data }) {
     allBlogPosts.slice(index * 3, index * 3 + 3)
   );
 
-  const paginationPageCount = Math.round(allBlogPosts.length / 3);
+  const paginationPageCount = Math.ceil(allBlogPosts.length / 3);
 
   const handleIndexChange = (newIndex) => {
     setIndex(newIndex);
@@ -30,7 +30,7 @@ function Index({ location, data }) {
           <div className="row">
             <div className="col-xxl-8 col-xl-8 col-lg-8">
               <div className="postbox__wrapper pr-20">
-                {allBlogPosts.length > 1 ? (
+                {allBlogPosts.length > 0 ? (
                   currentBlogPosts.map((postData) => (
                     <BlogPost key={postData.node.id} {...postData.node} />
                   ))
@@ -47,7 +47,8 @@ function Index({ location, data }) {
                 )}
               </div>
             </div>
-            {allBlogPosts.length > 1 && (
+
+            {allBlogPosts.length > 0 && (
               <RecentPosts posts={allBlogPosts.slice(0, 3)} />
             )}
           </div>
