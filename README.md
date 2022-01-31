@@ -1,135 +1,96 @@
-# Gatsby + Netlify CMS Starter
+# Roose Paint & Restoration LLC Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
+https://roosepaint.com
 
-**Note:** This starter uses [Gatsby v4](https://www.gatsbyjs.com/gatsby-4/).
+## Table of contents
 
-This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+  - [Author](#author)
+- [Fast Instructions for running this project](#fast-instructions-for-running-this-project)
+- [General Instructions for React Apps](#general-instructions-for-react-apps)
+  - [`npm start`](#npm-start)
+  - [`npm run build`](#npm-run-build)
+- [The Development Process](#the-development-process)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Acknowledgments](#acknowledgments)
 
-It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+## Overview
 
-## Features
+This website was built for a local painting business using various Front-End Technologies. Here are some of them:
 
-- A simple landing page with blog functionality built with Netlify CMS
-- Editable Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
-- Create Blog posts from Netlify CMS
-- Tags: Separate page for posts under each tag
-- Basic directory organization
-- Uses Bulma for styling, but size is reduced by `gatsy-plugin-purgecss`
-- Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
-- Uses `gatsby-plugin-image` with Netlify-CMS preview support
-- Separate components for everything
-- Netlify deploy configuration
-- Netlify function support, see `netlify/functions` folder
-- Perfect score on Lighthouse for SEO, Accessibility and Performance (wip:PWA)
-- ..and more
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html badge"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css badge"/>
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript badge"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="react badge"/>
+  <img src="https://img.shields.io/badge/Gatsby-663399?style=for-the-badge&logo=gatsby&logoColor=white" alt="gatsby badge"/>
+  <img src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white" alt="json json badge"/>
+</p>
 
-## Prerequisites
+### Screenshot
 
-- Minimal Node.js version 14.15.0
-- [Gatsby CLI](https://www.gatsbyjs.com/docs/reference/gatsby-cli/)
-- [Netlify CLI](https://github.com/netlify/cli)
+![](./src/assets/anywherefitnesshomepagess.png)
 
-## Getting Started (Recommended)
+### Links
 
-Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)). Use the button below to build and deploy your own copy of the repository:
+- [Live Site](https://roosepaint.com)
+- [Github Repo](https://github.com/ErikBahena/roose-paint-and-restoration)
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/gatsby-starter-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+### Author
 
-After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template. Next, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete. Next, you’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
+- Erik Bahena: Full Stack Developer | React Friendly | Family Man | [My Github](https://github.com/ErikBahena) | [My LinkedIn](https://www.linkedin.com/in/erikbahena/) | <a href="mailto:erikjbahena@gmail.com">Email Me</a>
 
-### Access Locally
+## Fast Instructions for running this project
 
-Pulldown a local copy of the Github repository Netlify created for you, with the name you specified in the previous step
+- clone the project
+- in your terminal `npm install`
+- then `npm run start`
 
-```
-$ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
-$ cd [REPO_NAME]
-$ yarn
-$ netlify dev # or ntl dev
-```
+That should do it. I hope you enjoy!
 
-This uses [Netlify Dev](https://www.netlify.com/products/dev/?utm_source=blog&utm_medium=netlifycms&utm_campaign=devex) CLI feature to serve any functions you have in the `netlify/functions` folder.
+## General Instructions for React Apps
 
-To test the CMS locally, you'll need to run a production build of the site:
+In the project directory, you can run:
 
-```
-$ npm run build
-$ netlify dev # or ntl dev
-```
+### `npm start`
 
-### Media Libraries (installed, but optional)
+Runs the app in the development mode.\
+Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
-Media Libraries have been included in this starter as a default. If you are not planning to use `Uploadcare` or `Cloudinary` in your project, you **can** remove them from module import and registration in `src/cms/cms.js`. Here is an example of the lines to comment or remove them your project.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-```javascript
-import CMS from "netlify-cms-app";
-// import uploadcare from 'netlify-cms-media-library-uploadcare'
-// import cloudinary from 'netlify-cms-media-library-cloudinary'
+### `npm run build`
 
-import AboutPagePreview from "./preview-templates/AboutPagePreview";
-import BlogPostPreview from "./preview-templates/BlogPostPreview";
-import ProductPagePreview from "./preview-templates/ProductPagePreview";
-import IndexPagePreview from "./preview-templates/IndexPagePreview";
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-// CMS.registerMediaLibrary(uploadcare);
-// CMS.registerMediaLibrary(cloudinary);
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-CMS.registerPreviewTemplate("index", IndexPagePreview);
-CMS.registerPreviewTemplate("about", AboutPagePreview);
-CMS.registerPreviewTemplate("products", ProductPagePreview);
-CMS.registerPreviewTemplate("blog", BlogPostPreview);
-```
+## The Development Process
 
-Note: Don't forget to also remove them from `package.json` and `yarn.lock` / `package-lock.json` using `yarn` or `npm`. During the build netlify-cms-app will bundle the media libraries as well, having them removed will save you build time.
-Example:
+- Discussed Website Content Requirements with Client
+- Created Deadlines for Website Features and Pages
+- Envisioned Website Needs In Relation to Technologies Available and Project Scale
+- Developed, Refined, and Revised Website
+- Integrated Netlify's CMS for Easy Content Management
 
-```
-yarn remove netlify-cms-media-library-uploadcare
-```
+### Continued Development
 
-OR
+- Add Search Feature To Entire Site
+- Add Search Feature Specific to the Blog
+- Create multipage, stateful CMS Previews
 
-```
-yarn remove netlify-cms-media-library-cloudinary
-```
+### Useful Resources
 
-## Getting Started (Without Netlify)
+- [date-fns](https://www.date-fns.org) - Everything to do with dates
+- [Zoom](https://www.zoom.com) - Useful for meetings, screensharing, and team environments.
 
-```
-$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/netlify-templates/gatsby-starter-netlify-cms/
-$ cd [SITE_DIRECTORY_NAME]
-$ npm run build
-$ npm run start
-```
+## Acknowledgments
 
-### Setting up the CMS
-
-Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting for production.
-
-If you want use Netlify CMS locally, run the site in one terminal with `npm run start` and in another
-Terminal you can use `npx netlify-cms-proxy-server` which proxy requests so you'll be automatically logged
-in as a user on [http:localhost:3000/admin](http:localhost:3000/admin).
-
-## Debugging
-
-Windows users, who aren't using [WSL](https://docs.microsoft.com/en-us/windows/wsl/about), might encounter `node-gyp` errors when trying to npm install.
-To resolve, make sure that you have both Python 2.7 and the Visual C++ build environment installed.
-
-```
-npm config set python python2.7
-npm install --global --production windows-build-tools
-```
-
-[Full details here](https://www.npmjs.com/package/node-gyp "NPM node-gyp page").
-
-MacOS and WSL users who might also encounter some errors, check [node-gyp](https://github.com/nodejs/node-gyp) for more info. We recommend using the latest stable node version.
-
-## Purgecss
-
-This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) and [bulma](https://bulma.io/). The bulma builds are usually ~170K but reduced 90% by purgecss.
-
-# CONTRIBUTING
-
-Contributions are always welcome, no matter how large or small. Before contributing,
-please read the [code of conduct](CODE_OF_CONDUCT.md).
+- [Traversity Media: Gatsby Crash Course](https://youtu.be/6YhqQ2ZW1sc)
+- [Web Dev Profesh: Gatsby With NetlifyCMS Tutorial](https://youtu.be/IWmVSm2KevY)
