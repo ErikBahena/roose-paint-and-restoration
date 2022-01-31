@@ -24,10 +24,13 @@ const index = ({ data, location }) => {
             </div>
           </div>
           <div className="row">
-            {posts &&
+            {posts.length > 0 ? (
               posts.map((post) => (
                 <GalleryPost key={post.id} {...post.frontmatter} />
-              ))}
+              ))
+            ) : (
+              <h2>No Gallery Posts...</h2>
+            )}
           </div>
         </div>
       </section>

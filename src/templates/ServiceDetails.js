@@ -1,6 +1,7 @@
 import React from "react";
 import PageTitle from "../components/PageTitle";
 import Testimonials from "../components/Testimonials";
+import { alphanumericFilter } from "../helpers";
 import { Link } from "gatsby";
 import { graphql } from "gatsby";
 
@@ -197,7 +198,9 @@ export const ServiceDetailsTemplate = ({
                         sideRoutes.nodes.map((service) => (
                           <li key={service.id}>
                             <Link
-                              to={`/services/${service.frontmatter.urlRoute}`}
+                              to={`/services/${alphanumericFilter(
+                                service.frontmatter.title
+                              )}`}
                             >
                               {service.frontmatter.title}{" "}
                               <i className="fal fa-long-arrow-right" />

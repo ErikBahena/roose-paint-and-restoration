@@ -1,4 +1,5 @@
 import React from "react";
+import { alphanumericFilter } from "../helpers";
 import { Link } from "gatsby";
 
 export default function HomeService(data) {
@@ -25,13 +26,15 @@ export default function HomeService(data) {
             <i className="flaticon-paint-1" />
           </div>
           <h3 className="services__title">
-            <a href="services-details.html">
+            <Link
+              to={`/services/${alphanumericFilter(data.frontmatter?.title)}`}
+            >
               {data.title || data.frontmatter?.title}
-            </a>
+            </Link>
           </h3>
           <p>{data.description || data.frontmatter?.shortDescription}</p>
           <Link
-            to={`/services/${data.frontmatter?.urlRoute}`}
+            to={`/services/${alphanumericFilter(data.frontmatter?.title)}`}
             className="link-btn-2"
           >
             read more

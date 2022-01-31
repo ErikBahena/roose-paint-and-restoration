@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
-import { formatPhonePlain, isToday } from "../helpers";
+import { formatPhonePlain, isToday, alphanumericFilter } from "../helpers";
 
 import siteInfo from "../../site/settings/siteInfo.json";
 import darkLogo from "../../static/img/logo/darkLogo.png";
@@ -132,7 +132,9 @@ export default function Footer() {
                           services.allMarkdownRemark.nodes.map((service) => (
                             <li key={service.id}>
                               <Link
-                                to={`/services/${service.frontmatter.urlRoute}`}
+                                to={`/services/${alphanumericFilter(
+                                  service.frontmatter.title
+                                )}`}
                                 activeClassName="active"
                               >
                                 {service.frontmatter.title}

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import logo from "../../static/img/logo/lightLogo.png";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
+import { alphanumericFilter } from "../helpers";
 import siteInfo from "../../site/settings/siteInfo.json";
 
 export default function Header({ handleMenuToggle }) {
@@ -74,7 +75,9 @@ export default function Header({ handleMenuToggle }) {
                           services.allMarkdownRemark.nodes.map((service) => (
                             <li key={service.id}>
                               <Link
-                                to={`/services/${service.frontmatter.urlRoute}`}
+                                to={`/services/${alphanumericFilter(
+                                  service.frontmatter.title
+                                )}`}
                                 activeClassName="active"
                               >
                                 {service.frontmatter.title}

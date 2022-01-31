@@ -4201,8 +4201,15 @@ p {
 .postbox__meta span:hover i {
   color: #24c373;
 }
+.postbox__text ul {
+  margin: revert;
+  padding: revert;
+}
 .postbox__text p {
   margin-bottom: 28px;
+}
+.postbox__text li {
+  list-style: revert;
 }
 .postbox__text-single p {
   margin-bottom: 15px;

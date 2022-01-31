@@ -7,24 +7,46 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark(
+      services: allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/(content/services)/" } }
       ) {
         nodes {
           id
           frontmatter {
-            urlRoute
+            title
+          }
+        }
+      }
+
+      blogDetails: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(content/blog)/" } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
           }
         }
       }
     }
   `);
-  const templatePath = path.resolve(`src/templates/ServiceDetails.js`);
+  const serviceDetails = path.resolve(`src/templates/ServiceDetails.js`);
+  const blogDetails = path.resolve(`src/templates/BlogPostDetails.js`);
 
-  result.data.allMarkdownRemark.nodes.forEach((node) => {
+  result.data.services.nodes.forEach((node) => {
     createPage({
-      path: `services/${node.frontmatter.urlRoute}`,
-      component: templatePath,
+      path: `services/${node.frontmatter.title.replace(/[^A-Za-z0-9]/g, "")}`,
+      component: serviceDetails,
+      context: {
+        id: node.id,
+      },
+    });
+  });
+
+  result.data.blogDetails.nodes.forEach((node) => {
+    createPage({
+      path: `blog/${node.frontmatter.title.replace(/[^A-Za-z0-9]/g, "")}`,
+      component: blogDetails,
       context: {
         id: node.id,
       },
