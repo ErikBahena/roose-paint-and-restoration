@@ -18,7 +18,7 @@ export default function HomeService(data) {
             src={
               data.bg || data.frontmatter?.homeImage.childImageSharp.fluid.src
             }
-            alt="service"
+            alt="service background"
           />
         </div>
         <div className="services__content text-center">
