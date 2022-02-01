@@ -27,6 +27,12 @@ collections:
       preview: true
     fields:
       - {
+          label: "Header Image",
+          name: "headerImage",
+          choose_url: false,
+          widget: "image",
+        }
+      - {
           label: "Main Image",
           name: "image",
           choose_url: false,

@@ -4,6 +4,7 @@ import GalleryPostPreview from "./preview-templates/GalleryPostPreview";
 import ServicePreview from "./preview-templates/ServicePreview";
 import HomePagePreview from "./preview-templates/HomePagePreview";
 import AboutPagePreview from "./preview-templates/AboutPagePreview";
+import BlogPostPreview from "./preview-templates/BlogPostPreview";
 
 // eslint-disable-next-line
 import mainStyle from "../assets/css/style.css";
@@ -30,3 +31,4 @@ CMS.registerPreviewTemplate("services", ServicePreview);
 
 CMS.registerPreviewTemplate("homeContent", HomePagePreview);
 CMS.registerPreviewTemplate("aboutContent", AboutPagePreview);
+CMS.registerPreviewTemplate("blog", BlogPostPreview);
