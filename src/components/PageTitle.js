@@ -1,11 +1,14 @@
 import React from "react";
 
-export default function PageTitle({ location }) {
+export default function PageTitle({ location, image }) {
   return (
     <section
       className="page__title-area pt-70 pb-60 p-relative page__title-overlay"
       style={{
-        backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRneB8CnGLCM7tLrLxPJlbeBRFLp2tgFAprWw&usqp=CAU")`,
+        backgroundImage: `url("${
+          image ||
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRneB8CnGLCM7tLrLxPJlbeBRFLp2tgFAprWw&usqp=CAU"
+        }")`,
       }}
     >
       <div className="container">

@@ -17,16 +17,6 @@ export default function GalleryPost(data) {
             <h3 className="portfolio__title-3">{data.title}</h3>
             <p>{data.description}</p>
           </div>
-          <div className="portfolio__plus-3 transition-3">
-            <a
-              href={`${
-                data?.image?.childImageSharp.fluid.src || data?.bg?.toString()
-              }`}
-              className="popup-image"
-            >
-              <i className="far fa-search-plus" />
-            </a>
-          </div>
         </div>
       </div>
     </div>
