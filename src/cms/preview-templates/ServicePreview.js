@@ -1,8 +1,6 @@
 import React from "react";
 import HomeService from "../../templates/HomeService";
-import ServiceDetails, {
-  ServiceDetailsTemplate,
-} from "../../templates/ServiceDetails";
+import { ServiceDetailsTemplate } from "../../templates/ServiceDetails";
 
 export default function ServicePreview({ entry, getAsset }) {
   let bg = getAsset(entry.getIn(["data", "homeImage"])).toString();

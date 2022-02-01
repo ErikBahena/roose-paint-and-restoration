@@ -1,6 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import RecentPosts from "../components/blog/RecentPosts";
 import PageTitle from "../components/PageTitle";
 
