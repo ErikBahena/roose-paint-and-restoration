@@ -20,7 +20,7 @@ function BlogPostDetails({ data }) {
                         data.blogDetails.frontmatter.image.childImageSharp.fixed
                           .src
                       }
-                      alt="blog header"
+                      alt="blog title background"
                     />
                   </div>
                   <div className="postbox__content postbox__content-single">
