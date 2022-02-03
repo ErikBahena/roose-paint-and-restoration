@@ -64,7 +64,7 @@ export const ServicesTemplate = ({ tagline, title, services }) => {
           </div>
         </div>
         <div className="row">
-          {services.length > 0 ? (
+          {services?.length > 0 ? (
             services.map((service) => {
               return <HomeService key={service.id} {...service} />;
             })
