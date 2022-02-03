@@ -1,11 +1,12 @@
 ---
-image: images/davisuko-5e5n49rwtba-unsplash.jpg
 headerImage: images/davisuko-5e5n49rwtba-unsplash.jpg
+image: images/davisuko-5e5n49rwtba-unsplash.jpg
 sidebarImage: images/davisuko-5e5n49rwtba-unsplash.jpg
 title: Blog Example Title 1
 date: 2022-01-29T22:29:01.664Z
 publisherName: Example Name
-description: here is a description that will show on the general blog page/ not the details page
+description: here is a description that will show on the general blog page/ not
+  the details page sample update
 ---
 
 Here is some **content**
