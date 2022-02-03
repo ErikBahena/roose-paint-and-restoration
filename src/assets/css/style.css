@@ -1729,58 +1729,28 @@ p {
   }
 }
 .slider__title {
-  font-size: 130px;
+  font-size: 100px;
   color: #ffffff;
   line-height: 1;
   margin-bottom: 50px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .slider__title {
-    font-size: 90px;
+    font-size: 60px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider__title {
-    font-size: 70px;
+    font-size: 40px;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+@media (max-width: 767px) {
   .slider__title {
-    font-size: 60px;
+    font-size: 30px;
   }
 }
-@media (max-width: 575px) {
-  .slider__title {
-    font-size: 37px;
-  }
-}
-.slider__title-2 {
-  font-size: 130px;
-  color: #ffffff;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  line-height: 1;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .slider__title-2 {
-    font-size: 110px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .slider__title-2 {
-    font-size: 80px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .slider__title-2 {
-    font-size: 60px;
-  }
-}
-@media (max-width: 575px) {
-  .slider__title-2 {
-    font-size: 60px;
-  }
-}
+
 .slider__nav .swiper-slider-nav i {
   font-size: 20px;
   color: #ffffff;

@@ -212,11 +212,7 @@ export const ServiceDetailsTemplate = ({
                 </div>
               </div>
               <div className="services__sidebar-banner w-img text-center p-relative">
-                <img
-                  src={actionImage}
-                  style={isPreview && { maxWidth: "370px", maxHeight: "480px" }}
-                  alt="contact us banner"
-                />
+                <img src={actionImage} alt="contact us banner" />
                 <div className="services__sidebar-banner-content">
                   <h6>{actionTagline}</h6>
 
