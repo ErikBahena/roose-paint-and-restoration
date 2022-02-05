@@ -1,28 +1,18 @@
 ---
-headerImage: images/davisuko-5e5n49rwtba-unsplash.jpg
-image: images/davisuko-5e5n49rwtba-unsplash.jpg
-sidebarImage: images/davisuko-5e5n49rwtba-unsplash.jpg
-title: Blog Example Title 1
+headerImage: images/119676073_742017183044938_1824213921768599320_n.jpg
+image: images/119676073_742017183044938_1824213921768599320_n.jpg
+sidebarImage: images/119654455_742017249711598_2829394537591336654_n.jpg
+title: prep work
 date: 2022-01-29T22:29:01.664Z
-publisherName: Example Name
-description: here is a description that will show on the general blog page/ not
-  the details page sample update
+publisherName: Jamis Roose
+description: All about the prep
 ---
+All about the prep!
 
-Here is some **content**
-here is a paragraph of some blog details here is a paragraph of some blog details here is a paragraph of some blog details here is a paragraph of some blog details here is a paragraph of some blog details here is a paragraph of some blog details here is a paragraph of some blog details here is a paragraph of some blog details
+This is a new build that already had all the walls paint before we got there. Al we were painting on this job was the trim package.
 
 #### **Hello there**
 
-<ul>
-   <li>Sample Content </li>
-      <ul>
-         <li>Sample Content </li>
-         <li>Sample Content </li>
-         <li>Sample Content </li>
-      </ul>
-   <li>Sample Content </li>
-   <li>Sample Content </li>
-</ul>
+
 
 ![some alt test](images/davisuko-5e5n49rwtba-unsplash.jpg "A title")
