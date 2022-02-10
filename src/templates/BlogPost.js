@@ -9,7 +9,11 @@ export default function BlogPost(postData) {
       <div className="postbox__thumb w-img">
         <Link to={`/blog/${alphanumericFilter(postData.frontmatter.title)}`}>
           <img
-            src={postData.frontmatter.image.childImageSharp.fixed.src}
+            src={postData.frontmatter.image.publicURL}
+            style={{
+              objectFit: "contain",
+              maxHeight: "455px",
+            }}
             alt="blog header"
           />
         </Link>

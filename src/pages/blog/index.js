@@ -73,6 +73,7 @@ export const query = graphql`
             date
             title
             image {
+              publicURL
               childImageSharp {
                 fixed(width: 760, height: 455, fit: COVER) {
                   src

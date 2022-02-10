@@ -6,10 +6,12 @@ export default function GalleryPost(data) {
       <div className="portfolio__item-3 mb-30 p-relative fix">
         <div className="portfolio__thumb w-img">
           <img
-            src={`${
-              data?.image?.childImageSharp.fluid.src || data?.bg?.toString()
-            }`}
+            src={`${data?.image?.publicURL || data?.bg?.toString()}`}
             alt="gallery post"
+            style={{
+              maxWidth: "100%",
+              objectFit: "contain",
+            }}
           />
         </div>
         <div className="portfolio__content-3 transition-3 d-flex align-items-center justify-content-between">
