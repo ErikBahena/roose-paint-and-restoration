@@ -1,7 +1,8 @@
 ---
 title: Exterior Painting
 date: 2022-01-27T06:34:34.359Z
-shortDescription: short descriptiion on this service t
+shortDescription: There are several things to consider when approaching an
+  exterior project- temperature, environment, ease of access, color choices
 homeImage: /static/img/exteriorpaintingexmpl.jpeg
 detailsImage: /static/img/exteriorpaintingexmpl.jpeg
 detailsDescription: here is a detail facing description
