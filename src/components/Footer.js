@@ -23,6 +23,8 @@ export default function Footer() {
     }
   `);
 
+  const numericalDay = new Date().getDay();
+
   return (
     <footer>
       <div className="footer__area black-bg">
@@ -65,24 +67,26 @@ export default function Footer() {
                   <div className="footer__widget-content">
                     <div className="footer__widget-about">
                       <ul>
-                        <li className={isToday("Monday") ? "active" : ""}>
+                        <li className={numericalDay === 1 ? "active" : ""}>
                           Monday: <span>8:00 AM - 5:00 PM</span>
                         </li>
-                        <li className={isToday("Tuesday") ? "active" : ""}>
+                        <li className={numericalDay === 2 ? "active" : ""}>
                           Tuesday: <span>8:00 AM - 5:00 PM</span>
                         </li>
-                        <li className={isToday("Wednesday") ? "active" : ""}>
+                        <li className={numericalDay === 3 ? "active" : ""}>
                           Wednesday: <span>8:00 AM - 5:00 PM</span>
                         </li>
-                        <li className={isToday("Thursday") ? "active" : ""}>
+                        <li className={numericalDay === 4 ? "active" : ""}>
                           Thursday: <span>8:00 AM - 5:00 PM</span>
                         </li>
-                        <li className={isToday("Friday") ? "active" : ""}>
+                        <li className={numericalDay === 5 ? "active" : ""}>
                           Friday: <span>8:00 AM - 5:00 PM</span>
                         </li>
                         <li
                           className={
-                            isToday("Saturday", "Sunday") ? "active" : ""
+                            numericalDay === 6 || numericalDay === 0
+                              ? "active"
+                              : ""
                           }
                         >
                           Saturday & Sunday: <span>Closed</span>

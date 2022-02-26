@@ -5,6 +5,8 @@ import { formatPhonePlain, isToday } from "../helpers";
 import Logo from "../../static/img/logo/lightLogo.png";
 
 export default function SideBar({ handleMenuToggle }) {
+  const numericalDay = new Date().getDay();
+
   return (
     <>
       <div className="body-overlay opened" onClick={handleMenuToggle} />
@@ -85,22 +87,26 @@ export default function SideBar({ handleMenuToggle }) {
               <h4>Business Hours</h4>
               <div className="footer__widget-about onSideBar">
                 <ul>
-                  <li className={isToday("Monday") ? "active" : ""}>
+                  <li className={numericalDay === 1 ? "active" : ""}>
                     Monday: <span>8:00 AM - 5:00 PM</span>
                   </li>
-                  <li className={isToday("Tuesday") ? "active" : ""}>
+                  <li className={numericalDay === 2 ? "active" : ""}>
                     Tuesday: <span>8:00 AM - 5:00 PM</span>
                   </li>
-                  <li className={isToday("Wednesday") ? "active" : ""}>
+                  <li className={numericalDay === 3 ? "active" : ""}>
                     Wednesday: <span>8:00 AM - 5:00 PM</span>
                   </li>
-                  <li className={isToday("Thursday") ? "active" : ""}>
+                  <li className={numericalDay === 4 ? "active" : ""}>
                     Thursday: <span>8:00 AM - 5:00 PM</span>
                   </li>
-                  <li className={isToday("Friday") ? "active" : ""}>
+                  <li className={numericalDay === 5 ? "active" : ""}>
                     Friday: <span>8:00 AM - 5:00 PM</span>
                   </li>
-                  <li className={isToday("Saturday", "Sunday") ? "active" : ""}>
+                  <li
+                    className={
+                      numericalDay === 6 || numericalDay === 0 ? "active" : ""
+                    }
+                  >
                     Saturday & Sunday: <span>Closed</span>
                   </li>
                 </ul>
