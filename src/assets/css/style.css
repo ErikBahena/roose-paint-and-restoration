@@ -6400,3 +6400,28 @@ p {
   align-items: center;
   justify-content: center;
 }
+
+.insta-feed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elfsight-app-04c90082-3f95-4b2e-82f0-289ebbe5b94b {
+  width: 70% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 4% !important;
+  margin-bottom: 4% !important;
+}
+
+@media (max-width: 768px) {
+  .elfsight-app-04c90082-3f95-4b2e-82f0-289ebbe5b94b {
+    width: 85% !important;
+  }
+}
+@media (max-width: 425px) {
+  .elfsight-app-04c90082-3f95-4b2e-82f0-289ebbe5b94b {
+    width: 90% !important;
+  }
+}

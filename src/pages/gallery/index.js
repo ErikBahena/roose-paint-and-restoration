@@ -9,7 +9,11 @@ const index = ({ data, location }) => {
   return (
     <>
       <PageTitle location={location} />
-      <section className="portfolio__area pt-125 pb-100">
+      <div className="insta-feed-container">
+        <div className="elfsight-app-04c90082-3f95-4b2e-82f0-289ebbe5b94b" />
+      </div>
+
+      {/* <section className="portfolio__area pt-125 pb-100">
         <div className="container">
           <div className="row">
             <div className="col-xxl-6 offset-xxl-3 col-xl-8 offset-xl-2 col-lg-8 offset-lg-2">
@@ -33,7 +37,7 @@ const index = ({ data, location }) => {
             )}
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

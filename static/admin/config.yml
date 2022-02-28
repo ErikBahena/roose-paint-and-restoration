@@ -112,6 +112,7 @@ collections:
           - { label: "Support Email", name: "supportEmail", widget: "string" }
           - { label: "Phone Number", name: "phone", widget: "string" }
           - { label: "Facebook Link", name: "facebookLink", widget: "string" }
+          - { label: "Instagram Link", name: "instagramLink", widget: "string" }
           - { label: "Jobber Link", name: "jobberLink", widget: "string" }
           - {
               label: "YouTube Link",
