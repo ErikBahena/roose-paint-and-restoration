@@ -33,13 +33,6 @@ export default function HomeAbout() {
               }
             }
           }
-          companyOwnerSignature {
-            childImageSharp {
-              fluid(maxWidth: 120, maxHeight: 75) {
-                src
-              }
-            }
-          }
         }
       }
     }
@@ -65,10 +58,10 @@ export default function HomeAbout() {
         data.markdownRemark.frontmatter.companyOwnerImage.childImageSharp.fluid
           .src
       }
-      companyOwnerSignature={
-        data.markdownRemark.frontmatter.companyOwnerSignature.childImageSharp
-          .fluid.src
-      }
+      // companyOwnerSignature={
+      //   data.markdownRemark.frontmatter.companyOwnerSignature.childImageSharp
+      //     .fluid.src
+      // }
     />
   );
 }
@@ -83,7 +76,7 @@ export const HomeAboutTemplate = ({
   largeAboutImage,
   circleAboutImage,
   companyOwnerImage,
-  companyOwnerSignature,
+  // companyOwnerSignature,
   isPreview,
 }) => {
   return (
@@ -133,13 +126,13 @@ export const HomeAboutTemplate = ({
                   </div>
                 </div>
                 <div className="about__author-signature">
-                  <img
+                  {/* <img
                     src={companyOwnerSignature}
                     style={
                       isPreview && { maxWidth: "120px", maxHeight: "75px" }
                     }
                     alt="company owner signature"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>

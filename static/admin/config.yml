@@ -267,12 +267,6 @@ collections:
           widget: "image",
         }
       - {
-          label: "Company Owner Signature",
-          name: "companyOwnerSignature",
-          choose_url: false,
-          widget: "image",
-        }
-      - {
           label: "Company Owner Name",
           name: "companyOwnerName",
           widget: "string",

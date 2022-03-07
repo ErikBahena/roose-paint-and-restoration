@@ -69,7 +69,7 @@ export const ServicesTemplate = ({ tagline, title, services }) => {
               return <HomeService key={service.id} {...service} />;
             })
           ) : (
-            <h2>No Services at the Moment</h2>
+            <h2>...do not show on preview</h2>
           )}
         </div>
       </div>

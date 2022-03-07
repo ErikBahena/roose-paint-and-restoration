@@ -19,9 +19,9 @@ export default function HomePagePreview({ entry, getAsset }) {
     largeAboutImage: getAsset(entry.getIn(["data", "largeAboutImage"])),
     circleAboutImage: getAsset(entry.getIn(["data", "circleAboutImage"])),
     companyOwnerImage: getAsset(entry.getIn(["data", "companyOwnerImage"])),
-    companyOwnerSignature: getAsset(
-      entry.getIn(["data", "companyOwnerSignature"])
-    ),
+    // companyOwnerSignature: getAsset(
+    //   entry.getIn(["data", "companyOwnerSignature"])
+    // ),
   };
 
   let servicesContent = {
