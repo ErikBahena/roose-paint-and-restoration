@@ -8,12 +8,12 @@ homeImage: images/117946989_309835503557133_495650400738143029_n.jpg
 detailsImage: images/117429390_309835660223784_1425096315934094054_n.jpg
 detailsDescription: Whether its maintenance or restoration we have the tools and
   experience to protect and beautify your home and properties!
-detailsFeaturesDescription: Soft washing or power washing, our highly trained
-  staff knows what products to use on what surfaces to ensure quality results
-  and meet industry standards.
+detailsFeaturesDescription: Soft washing or power washing, our skilled craftsman
+  know what products to use on what surfaces to ensure quality results and meet
+  industry standards.
 beforeImage: images/power-washing.jpg
 afterImage: images/power-washing.jpg
-resultsDescription: "If you're not in the market to retore your home or
+resultsDescription: "If you're not in the market to fully restore your home or
   property, or just want to get your annual maintenance, feel free to contact us
   and schedule an appointment! "
 actionImage: images/deck-retore.jpg
