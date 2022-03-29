@@ -5,11 +5,12 @@ shortDescription: Whether residential repaint or new build construction, we have
   the tools and experience to protect and beautify your home
 homeImage: /images/exteriorExample.jpeg
 detailsImage: /images/exteriorExample.jpeg
-detailsDescription: Whether residential repaint or newbuild construction
+detailsDescription: Whether residential repaint or newbuild construction, we
+  have tools and experience, and knowledge to protect and beautify your home.
 detailsFeaturesDescription: please be patient...website in progress
 beforeImage: /images/exteriorExample.jpeg
 afterImage: /images/exteriorExample.jpeg
-resultsDescription: Here is a description about the results of the service provided
+resultsDescription: please be patient...website in progress
 youtubeVideoEmbedLink: null
 actionImage: /static/img/exteriorExample.jpeg
 actionTagline: Need Help?
